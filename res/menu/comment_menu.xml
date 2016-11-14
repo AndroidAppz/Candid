@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res-auto">
+    <item app:id="@id/comment_edit" app:visible="true" app:title="@string/edit_comment" app:showAsAction="always" />
+    <item app:id="@id/comment_delete" app:visible="true" app:title="@string/delete_comment" app:showAsAction="always" />
+    <item app:id="@id/comment_message_user" app:visible="true" app:title="@string/message_user" app:showAsAction="always" />
+    <item app:id="@id/comment_report" app:visible="true" app:title="@string/report_comment" app:showAsAction="always" />
+    <item app:id="@id/delete_moderator_report" app:visible="true" app:title="@string/delete_comment" app:showAsAction="always" />
+</menu>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/message_post_wrapper" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="10dp" android:layout_marginRight="15dp" android:layout_marginBottom="10dp">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="25dp">
+            <LinearLayout android:orientation="vertical" android:id="@id/message_post_row" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include android:id="@id/post_header" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x3201" layout="@layout/post_header" />
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <TextView android:textSize="18dp" android:textColor="0x106000b" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@id/message_post_caption" android:paddingLeft="8dp" android:paddingRight="8dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/title_activity_onboarding" />
+                    <ImageView android:id="@id/message_post_image" android:visibility="gone" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x9601" android:layout_marginBottom="8dp" android:scaleType="centerCrop" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/link_placeholder" android:background="@drawable/white_border" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp">
+                        <ImageView android:id="@id/post_link_image" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x6401" />
+                        <TextView android:textSize="18dp" android:textColor="0x106000b" android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@id/post_link_title" android:padding="3dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                        <TextView android:textSize="12dp" android:textColor="0x106000b" android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@id/post_link_desc" android:padding="3dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                        <TextView android:textSize="10dp" android:textColor="@color/privacy_blue" android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@id/post_link_domain" android:padding="3dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+        <TextView android:textStyle="italic" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@id/message_post_deleted" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="25dp" android:text="@string/message_post_deleted" />
+        <View android:background="#cccccc" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x101" android:layout_marginLeft="40dp" android:layout_marginRight="40dp" android:layout_alignParentBottom="true" />
+    </LinearLayout>
+</FrameLayout>

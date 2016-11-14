@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res-auto">
+    <item app:id="@id/message_user_menu_block" app:visible="true" app:title="@string/message_user_menu_block" app:showAsAction="always" />
+    <item app:id="@id/message_user_menu_unblock" app:visible="true" app:title="@string/message_user_menu_unblock" app:showAsAction="always" />
+    <item app:id="@id/message_user_menu_delete_thread" app:visible="true" app:title="@string/message_user_menu_delete_thread" app:showAsAction="always" />
+</menu>

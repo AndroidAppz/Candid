@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res-auto">
+    <item app:id="@id/post_menu_edit" app:visible="false" app:title="@string/edit_post" app:showAsAction="always" />
+    <item app:id="@id/post_menu_delete" app:visible="false" app:title="@string/delete_post" app:showAsAction="always" />
+    <item app:id="@id/post_menu_message_user" app:visible="false" app:title="@string/message_user" app:showAsAction="always" />
+    <item app:id="@id/post_menu_hide" app:visible="false" app:title="@string/hide_post" app:showAsAction="always" />
+    <item app:id="@id/post_menu_report" app:visible="false" app:title="@string/report_post" app:showAsAction="always" />
+    <item app:id="@id/post_menu_mute" app:visible="false" app:title="@string/mute_post" app:showAsAction="always" />
+    <item app:id="@id/post_menu_unmute" app:visible="false" app:title="@string/unmute_post" app:showAsAction="always" />
+</menu>

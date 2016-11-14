@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:id="@id/onboarding_fb" app:background="0x106000b" app:layout_width="match_parent" app:layout_height="match_parent">
+    <TextView app:textColor="#888888" app:id="@id/fb_skip" app:paddingLeft="10dp" app:paddingRight="10dp" app:layout_width="wrap_content" app:layout_height="UNKNOWN_DATA_0x1e01" app:text="Skip" app:layout_alignParentTop="true" app:layout_alignParentRight="true" app:textAlignment="center" />
+    <TextView app:textSize="20sp" app:textColor="@color/gossip" app:id="@id/fb_header" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginTop="40dp" app:text="@string/fb_header" app:layout_centerHorizontal="true" app:layout_heightPercent="7%" />
+    <TextView app:textSize="16sp" app:textColor="#666" app:id="@id/fb_subheader" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginLeft="20dp" app:layout_marginTop="10dp" app:layout_marginRight="20dp" app:text="@string/fb_subheader" app:layout_below="@id/fb_header" app:layout_centerHorizontal="true" app:textAlignment="center" />
+    <RelativeLayout app:id="@id/fb_animation_wrapper" app:layout_width="match_parent" app:layout_height="match_parent" app:layout_below="@id/fb_subheader" app:layout_centerVertical="true" app:layout_heightPercent="40%"
+        <RelativeLayout app:id="@id/group_layout" app:layout_width="match_parent" app:layout_height="match_parent" app:layout_centerVertical="true">
+            <ImageView app:id="@id/fb_spark_1" app:background="@drawable/sparkle_cross_4" app:layout_width="UNKNOWN_DATA_0xa01" app:layout_height="UNKNOWN_DATA_0xa01" app:layout_centerInParent="true" />
+            <ImageView app:id="@id/fb_spark_2" app:background="@drawable/sparkle_circle_1" app:layout_width="UNKNOWN_DATA_0xc01" app:layout_height="UNKNOWN_DATA_0xc01" app:layout_centerInParent="true" />
+            <ImageView app:id="@id/fb_spark_3" app:background="@drawable/sparkle_circle_2" app:layout_width="UNKNOWN_DATA_0x501" app:layout_height="UNKNOWN_DATA_0x501" app:layout_centerInParent="true" />
+            <ImageView app:id="@id/fb_spark_4" app:background="@drawable/sparkle_circle_5" app:layout_width="UNKNOWN_DATA_0xc01" app:layout_height="UNKNOWN_DATA_0xc01" app:layout_centerInParent="true" />
+            <ImageView app:id="@id/fb_spark_5" app:background="@drawable/sparkle_cross_2" app:layout_width="UNKNOWN_DATA_0xe01" app:layout_height="UNKNOWN_DATA_0xe01" app:layout_centerInParent="true" />
+            <ImageView app:id="@id/fb_spark_6" app:background="@drawable/sparkle_circle_6" app:layout_width="UNKNOWN_DATA_0x701" app:layout_height="UNKNOWN_DATA_0x701" app:layout_centerInParent="true" />
+            <ImageView app:id="@id/fb_spark_7" app:background="@drawable/sparkle_circle_7" app:layout_width="UNKNOWN_DATA_0xc01" app:layout_height="UNKNOWN_DATA_0xc01" app:layout_centerInParent="true" />
+            <ImageView app:id="@id/fb_spark_8" app:background="@drawable/sparkle_circle_3" app:layout_width="UNKNOWN_DATA_0x701" app:layout_height="UNKNOWN_DATA_0x701" app:layout_centerInParent="true" />
+            <ImageView app:id="@id/fb_spark_9" app:background="@drawable/sparkle_cross_4" app:layout_width="UNKNOWN_DATA_0xa01" app:layout_height="UNKNOWN_DATA_0xa01" app:layout_centerInParent="true" />
+            <ImageView app:id="@id/fb_spark_10" app:background="@drawable/sparkle_circle_2" app:layout_width="UNKNOWN_DATA_0x501" app:layout_height="UNKNOWN_DATA_0x501" app:layout_centerInParent="true" />
+            <ImageView app:id="@id/fb_spark_11" app:background="@drawable/sparkle_cross_1" app:layout_width="UNKNOWN_DATA_0xe01" app:layout_height="UNKNOWN_DATA_0xe01" app:layout_centerInParent="true" />
+            <ImageView app:id="@id/group_candy" app:background="@drawable/onboarding_group_candy" app:layout_width="UNKNOWN_DATA_0x9601" app:layout_height="UNKNOWN_DATA_0x9601" app:layout_centerInParent="true" />
+            <ImageView app:id="@id/group_traveling" app:background="@drawable/onboarding_group_traveling" app:layout_width="UNKNOWN_DATA_0x9601" app:layout_height="UNKNOWN_DATA_0x9601" app:layout_centerInParent="true" />
+            <ImageView app:id="@id/group_college" app:background="@drawable/onboarding_group_college" app:layout_width="UNKNOWN_DATA_0x9601" app:layout_height="UNKNOWN_DATA_0x9601" app:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout app:id="@id/fb_bottom" app:background="#f1f1f1" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_below="@id/fb_animation_wrapper" app:layout_heightPercent="40%"
+        <RelativeLayout app:id="@id/fb_button_container" app:background="@drawable/fb_connect_button" app:layout_width="UNKNOWN_DATA_0xf001" app:layout_height="UNKNOWN_DATA_0x2e01" app:layout_marginTop="20dp" app:layout_centerHorizontal="true">
+            <ImageView app:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" app:id="@id/fb_button_logo" app:background="@um$c/com_facebook_button_icon_white" app:layout_width="UNKNOWN_DATA_0x1401" app:layout_height="UNKNOWN_DATA_0x1401" app:layout_margin="10dp" app:layout_centerVertical="true" />
+            <TextView app:textColor="@um$a/com_facebook_button_text_color" app:id="@id/fb_button_text" app:layout_width="wrap_content" app:layout_height="wrap_content" app:text="Connect Facebook" app:layout_centerHorizontal="true" app:layout_centerVertical="true" />
+        </RelativeLayout>
+        <TextView app:textSize="13sp" app:textColor="@color/gossip_grey" app:id="@id/fb_info" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_marginLeft="20dp" app:layout_marginTop="20dp" app:layout_marginRight="20dp" app:text="@string/fb_info" app:layout_below="@id/fb_button_container" app:layout_centerHorizontal="true" app:textAlignment="center" />
+        <TextView app:textSize="13sp" app:textColor="@color/gossip_grey" app:id="@id/fb_info_2" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_marginLeft="20dp" app:layout_marginTop="5dp" app:layout_marginRight="20dp" app:text="@string/fb_info" app:layout_below="@id/fb_info" app:layout_centerHorizontal="true" app:textAlignment="center" />
+        <TextView app:textColor="@color/privacy_blue" app:id="@id/fb_privacy" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginTop="5dp" app:text="@string/privacy" app:layout_below="@id/fb_info_2" app:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <FrameLayout app:id="@id/fb_spinny" app:visibility="gone" app:clickable="true" app:layout_width="match_parent" app:layout_height="match_parent" app:layout_centerInParent="true">
+        <ImageView app:background="@color/gossip_grey" app:layout_width="match_parent" app:layout_height="match_parent" app:alpha="0.5" />
+        <ProgressBar app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:visibility="visible" app:layout_width="UNKNOWN_DATA_0x5001" app:layout_height="UNKNOWN_DATA_0x5001" style="@g$h/Widget_AppCompat_ProgressBar" />
+    </FrameLayout>
+</android.support.percent.PercentRelativeLayout>

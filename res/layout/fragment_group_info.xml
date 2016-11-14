@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:padding="30dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/group_info_placeholder" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="16sp" android:textStyle="bold" android:id="@id/group_info_header" android:paddingLeft="4dp" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/what_is_your_group_about" />
+            <android.support.v7.widget.AppCompatEditText android:id="@id/group_info" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLength="249" android:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|phone" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/choosePhotoPlaceholder" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x9601" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@id/ivGroupPhoto" android:layout_width="UNKNOWN_DATA_0x9601" android:layout_height="UNKNOWN_DATA_0x9601" android:src="@drawable/grey_circle_bg" android:scaleType="center" />
+            <LinearLayout android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:orientation="vertical" android:id="@id/photoTextHint" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="0x106000b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/choose_a_photo" android:shadowColor="#80000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="5.0" />
+                <ImageView android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:src="@drawable/camera_white" />
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <Button android:enabled="false" android:textColor="0x106000b" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@id/nextBtn" android:background="@drawable/orange_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/next" />
+            <Button android:textColor="0x106000c" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@id/skipBtn" android:background="0x106000d" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/skip" />
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@um$d/progress_bar" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ProgressBar android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_width="UNKNOWN_DATA_0x5001" android:layout_height="UNKNOWN_DATA_0x5001" style="@g$h/Widget_AppCompat_ProgressBar" />
+    </FrameLayout>
+</LinearLayout>

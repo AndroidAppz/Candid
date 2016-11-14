@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:id="@id/onboarding_contacts" app:background="0x106000b" app:layout_width="match_parent" app:layout_height="match_parent">
+    <TextView app:textColor="#888888" app:id="@id/contacts_skip" app:paddingLeft="10dp" app:paddingRight="10dp" app:visibility="gone" app:layout_width="wrap_content" app:layout_height="UNKNOWN_DATA_0x1e01" app:text="Skip" app:layout_alignParentTop="true" app:layout_alignParentRight="true" />
+    <TextView app:textSize="20sp" app:textColor="@color/gossip" app:id="@id/contacts_header" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginTop="40dp" app:text="@string/contacts_header" app:layout_centerHorizontal="true" app:layout_heightPercent="9%" />
+    <TextView app:textSize="16sp" app:textColor="#666" app:id="@id/contacts_subheader" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginLeft="20dp" app:layout_marginTop="10dp" app:layout_marginRight="20dp" app:text="@string/contacts_subheader" app:layout_below="@id/contacts_header" app:layout_centerHorizontal="true" />
+    <TextView app:textSize="16sp" app:textColor="#666" app:id="@id/contacts_subheader_2" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginLeft="20dp" app:layout_marginTop="10dp" app:layout_marginRight="20dp" app:text="@string/contacts_subheader" app:layout_below="@id/contacts_subheader" app:layout_centerHorizontal="true" />
+    <Button app:textColor="0x106000b" app:id="@id/contacts_button" app:background="@drawable/orange_button" app:layout_width="UNKNOWN_DATA_0xc801" app:layout_height="UNKNOWN_DATA_0x3001" app:layout_marginTop="40dp" app:text="@string/contacts_button" app:layout_below="@id/contacts_subheader_2" app:layout_centerHorizontal="true" />
+    <FrameLayout app:id="@id/contacts_spinny" app:visibility="gone" app:clickable="true" app:layout_width="match_parent" app:layout_height="match_parent" app:layout_centerInParent="true">
+        <ImageView app:background="@color/gossip_grey" app:layout_width="match_parent" app:layout_height="match_parent" app:alpha="0.5" />
+        <ProgressBar app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:layout_width="UNKNOWN_DATA_0x5001" app:layout_height="UNKNOWN_DATA_0x5001" style="@g$h/Widget_AppCompat_ProgressBar" />
+    </FrameLayout>
+</android.support.percent.PercentRelativeLayout>

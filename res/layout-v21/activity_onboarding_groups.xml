@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:layout_width="match_parent" app:layout_height="match_parent">
+    <TextView app:textSize="18dp" app:textColor="@color/gossip" app:id="@id/onboarding_groups_header" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginTop="10dp" app:layout_marginBottom="10dp" app:text="@string/join_groups" app:layout_centerHorizontal="true" />
+    <com.becandid.candid.views.GroupStackView app:id="@id/onboarding_groups_stack" app:visibility="gone" app:layout_width="match_parent" app:layout_below="@id/onboarding_groups_header" app:layout_heightPercent="90%" />
+    <LinearLayout app:orientation="vertical" app:id="@id/onboarding_groups_spinny" app:visibility="gone" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_centerInParent="true">
+        <ProgressBar app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:layout_width="UNKNOWN_DATA_0x5001" app:layout_height="UNKNOWN_DATA_0x5001" style="@g$h/Widget_AppCompat_ProgressBar" />
+        <TextView app:textColor="@color/gossip_grey" app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:layout_width="wrap_content" app:layout_height="wrap_content" app:text="Loading..." />
+    </LinearLayout>
+    <TextView app:textSize="18sp" app:textStyle="italic" app:textColor="@color/gossip_grey" app:id="@id/onboarding_groups_empty" app:visibility="gone" app:layout_width="wrap_content" app:layout_height="wrap_content" app:text="No more groups" app:layout_centerInParent="true" />
+    <Button app:enabled="false" app:textColor="0x106000b" app:id="@id/onboarding_groups_button" app:background="@drawable/orange_button" app:layout_width="UNKNOWN_DATA_0x9601" app:layout_height="UNKNOWN_DATA_0x3001" app:layout_marginTop="10dp" app:layout_marginBottom="10dp" app:text="@string/groups_continue" app:layout_alignParentBottom="true" app:layout_centerHorizontal="true" app:onClick="launchMainActivity" app:stateListAnimator="@um$h/com_facebook_login_view_com_facebook_confirm_logout" />
+</android.support.percent.PercentRelativeLayout>

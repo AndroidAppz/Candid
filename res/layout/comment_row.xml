@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+    <RelativeLayout android:id="@id/comment_container" android:layout_width="match_parent" android:layout_height="wrap_content"
+        <RelativeLayout android:id="@id/comment_user_icon_container" android:layout_width="UNKNOWN_DATA_0x2c01" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_marginRight="2dp" android:layout_alignParentLeft="true"
+            <RelativeLayout android:id="@id/comment_icon_switch" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@id/comment_mod_icon" android:visibility="gone" android:layout_width="UNKNOWN_DATA_0x1e01" android:layout_height="UNKNOWN_DATA_0x1e01" android:src="@drawable/candid_moderator_icon" android:scaleType="centerInside" android:layout_centerHorizontal="true" />
+                <TextView android:textSize="30dp" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@id/comment_user_icon" android:layout_width="UNKNOWN_DATA_0x1e01" android:layout_height="UNKNOWN_DATA_0x1e01" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <TextView android:textSize="10dp" android:textStyle="bold" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@id/comment_text_badge" android:paddingLeft="4dp" android:paddingRight="4dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:layout_below="@id/comment_icon_switch" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/comment_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/comment_user_icon_container">
+            <TextView android:textSize="16dp" android:textStyle="bold" android:id="@id/comment_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:drawablePadding="5dp" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/comment_body_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="20dp" android:layout_toRightOf="@id/comment_user_icon_container" android:layout_below="@id/comment_header">
+            <TextView android:textSize="16dp" android:textColor="0x106000c" android:autoLink="web|email|phone|map|all" android:id="@id/comment_body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="true" />
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/comment_sticker" android:visibility="gone" android:layout_width="UNKNOWN_DATA_0x5001" android:layout_height="UNKNOWN_DATA_0x5001" />
+                <ImageView android:id="@id/comment_body_image" android:visibility="gone" android:layout_width="UNKNOWN_DATA_0x6401" android:layout_height="UNKNOWN_DATA_0x6401" />
+            </FrameLayout>
+        </LinearLayout>
+        <RelativeLayout android:id="@id/comment_footer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="6dp" android:layout_toRightOf="@id/comment_user_icon_container" android:layout_below="@id/comment_body_container">
+            <TextView android:textSize="14sp" android:textColor="@color/gossip_grey" android:id="@id/comment_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20dp" />
+            <RelativeLayout android:id="@id/comment_like_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/comment_time"
+                <RelativeLayout android:id="@id/comment_like_padding" android:layout_width="UNKNOWN_DATA_0x1401" android:layout_height="UNKNOWN_DATA_0x1401" android:layout_marginRight="5dp">
+                    <ImageView android:id="@id/comment_like" android:background="@drawable/comment_like" android:layout_width="UNKNOWN_DATA_0xf01" android:layout_height="UNKNOWN_DATA_0xf01" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <TextView android:textSize="14sp" android:textColor="@color/gossip_grey" android:id="@id/comment_like_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20dp" android:layout_toRightOf="@id/comment_like_padding" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/comment_dislike_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/comment_like_container"
+                <RelativeLayout android:id="@id/comment_dislike_padding" android:layout_width="UNKNOWN_DATA_0x1401" android:layout_height="UNKNOWN_DATA_0x1401" android:layout_marginRight="5dp">
+                    <ImageView android:id="@id/comment_dislike" android:background="@drawable/comment_dislike" android:layout_width="UNKNOWN_DATA_0xf01" android:layout_height="UNKNOWN_DATA_0xf01" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <TextView android:textSize="14sp" android:textColor="@color/gossip_grey" android:id="@id/comment_dislike_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:layout_toRightOf="@id/comment_dislike_padding" />
+            </RelativeLayout>
+            <TextView android:textSize="14sp" android:textColor="@color/gossip_grey" android:id="@id/comment_reply" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reply" android:layout_toRightOf="@id/comment_dislike_container" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

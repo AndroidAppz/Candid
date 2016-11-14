@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:id="@id/onboarding_tags" app:background="0x106000b" app:layout_width="match_parent" app:layout_height="match_parent">
+    <TextView app:textSize="20sp" app:textColor="@color/gossip" app:id="@id/tags_header" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginTop="40dp" app:text="@string/tags_header" app:layout_alignParentTop="true" app:layout_centerHorizontal="true" />
+    <ScrollView app:id="@id/tags_scroll" app:background="0x106000d" app:layout_width="match_parent" app:layout_height="match_parent" app:layout_above="@id/tags_continue" app:layout_below="@id/tags_header" app:layout_centerHorizontal="true">
+        <RelativeLayout app:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" app:id="@id/tags_layout" app:background="0x106000b" app:layout_width="match_parent" app:layout_height="match_parent" />
+    </ScrollView>
+    <RelativeLayout app:id="@id/tags_continue" app:background="#f0f0f0" app:layout_width="match_parent" app:layout_height="UNKNOWN_DATA_0x5801" app:layout_alignParentBottom="true"
+        <RelativeLayout app:layout_width="UNKNOWN_DATA_0x11801" app:layout_height="wrap_content" app:layout_centerInParent="true">
+            <Button app:textColor="0x106000c" app:id="@id/tags_button_cancel" app:background="@drawable/white_button" app:visibility="gone" app:layout_width="UNKNOWN_DATA_0x8201" app:layout_height="UNKNOWN_DATA_0x3001" app:layout_marginRight="10dp" app:text="Cancel" app:stateListAnimator="@um$h/com_facebook_login_view_com_facebook_confirm_logout" />
+            <Button app:enabled="false" app:textColor="0x106000b" app:id="@id/tags_button" app:background="@drawable/orange_button" app:layout_width="UNKNOWN_DATA_0x8201" app:layout_height="UNKNOWN_DATA_0x3001" app:layout_marginLeft="10dp" app:text="Continue" app:layout_toRightOf="@id/tags_button_cancel" app:layout_centerInParent="true" app:stateListAnimator="@um$h/com_facebook_login_view_com_facebook_confirm_logout" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

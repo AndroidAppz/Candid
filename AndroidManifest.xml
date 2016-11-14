@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="136" android:versionName="1.6.1" package="com.becandid.candid" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002">
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="24" />
+    <permission android:name="com.becandid.candid.permission.C2D_MESSAGE" android:protectionLevel="signature|signatureOrSystem" />
+    <uses-permission android:name="com.becandid.candid.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" android:maxSdkVersion="18" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-feature android:glEsVersion="20000" android:required="true" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" />
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" />
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="com.becandid.candid.GossipApplication" android:allowBackup="true" android:largeHeap="true" android:supportsRtl="true">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <activity android:theme="@g$h/Theme_AppCompat_NoActionBar" android:name="com.becandid.candid.activities.SplashActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/AppTheme.NoActionBar" android:label="@string/title_activity_onboarding" android:name="com.becandid.candid.activities.OnboardingActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:label="Onboarding" android:name="com.becandid.candid.activities.OnboardingGroupsActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:label="@string/app_name" android:name="com.becandid.candid.activities.MainTabsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="becandid.com" android:pathPrefix="/feed" />
+                <data android:scheme="https" android:host="becandid.com" android:pathPrefix="/me" />
+                <data android:scheme="https" android:host="becandid.com" android:pathPrefix="/activity" />
+                <data android:scheme="https" android:host="becandid.com" android:pathPrefix="/groups" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/AppTheme.NoActionBar" android:label="Create a Post" android:name="com.becandid.candid.activities.CreatePostActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|stateAlwaysVisible|adjustResize|adjustNothing" android:parentActivityName="com.becandid.candid.activities.MainTabsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="becandid.com" android:pathPrefix="/post" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/AppTheme.NoActionBar" android:label="Comments" android:name="com.becandid.candid.activities.PostDetailsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden" android:windowSoftInputMode="adjustResize|adjustNothing" android:parentActivityName="com.becandid.candid.activities.MainTabsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="becandid.com" android:pathPattern="/p/.*" />
+                <data android:scheme="https" android:host="becandid.com" android:pathPattern="/i/.*" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/AppTheme.NoActionBar" android:label="Notification Settings" android:name="com.becandid.candid.activities.NotificationSettingsActivity" android:screenOrientation="portrait" android:parentActivityName="com.becandid.candid.activities.MainTabsActivity" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.becandid.candid.activities.GroupDetailsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|adjustNothing" android:parentActivityName="com.becandid.candid.activities.MainTabsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="becandid.com" android:pathPattern="/g/.*" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/AppTheme.NoActionBar" android:label="Group Search" android:name="com.becandid.candid.activities.GroupSearchActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|adjustNothing" android:parentActivityName="com.becandid.candid.activities.MainTabsActivity" />
+        <activity android:name="com.becandid.candid.activities.CreateGroupActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|stateAlwaysVisible" android:parentActivityName="com.becandid.candid.activities.MainTabsActivity" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.becandid.candid.activities.WebViewActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|adjustNothing" android:parentActivityName="com.becandid.candid.activities.MainTabsActivity" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.becandid.candid.activities.AddLinkActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|stateAlwaysVisible|adjustResize|adjustNothing" android:parentActivityName="com.becandid.candid.activities.CreatePostActivity" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.becandid.candid.activities.ChooseContactsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|adjustNothing" android:parentActivityName="com.becandid.candid.activities.MainTabsActivity" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.becandid.candid.activities.InviteContactsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|adjustNothing" android:parentActivityName="com.becandid.candid.activities.MainTabsActivity" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.becandid.candid.activities.FullScreenImageActivity" android:screenOrientation="portrait" android:parentActivityName="com.becandid.candid.activities.MainTabsActivity" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.becandid.candid.activities.ContentEditActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|adjustNothing" android:parentActivityName="com.becandid.candid.activities.PostDetailsActivity" />
+        <activity android:theme="@style/AppTheme.Transparent" android:name="com.becandid.candid.activities.TutorialPostActivity" android:windowSoftInputMode="adjustResize|adjustNothing" android:parentActivityName="com.becandid.candid.activities.MainTabsActivity" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.becandid.candid.activities.MeSettingsActivity" android:screenOrientation="portrait" android:parentActivityName="com.becandid.candid.activities.MainTabsActivity" />
+        <activity android:theme="@style/AppTheme.Transparent" android:name="com.becandid.candid.activities.TutorialMuteActivity" android:windowSoftInputMode="adjustResize|adjustNothing" android:parentActivityName="com.becandid.candid.activities.MainTabsActivity" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.becandid.candid.activities.MessageActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|adjustNothing" android:parentActivityName="com.becandid.candid.activities.MainTabsActivity" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="com.becandid.candid.activities.MessageSettingsActivity" android:screenOrientation="portrait" android:parentActivityName="com.becandid.candid.activities.MainTabsActivity" />
+        <activity android:theme="@style/AppTheme.NoActionBar" android:label="Group Search" android:name="com.becandid.candid.activities.MessageSearchActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|adjustNothing" android:parentActivityName="com.becandid.candid.activities.MainTabsActivity" />
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="4126da7852c65a3d8322667e431e13f4182f9602" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" />
+        <activity android:name="com.facebook.CustomTabActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <provider android:name="com.facebook.FacebookContentProvider" android:exported="true" android:authorities="com.facebook.app.FacebookContentProvider996059910461168" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id" />
+        <receiver android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.becandid.candid" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.becandid.candid.services.PushNotificationReceiver">
+            <intent-filter android:priority="1">
+                <action android:name="com.becandid.candid.GOT_PUSH" />
+                <action android:name="com.becandid.candid.MESSAGING" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.becandid.candid.services.GcmMessageHandler" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service android:name="com.becandid.candid.services.CustomInstanceIDListenerService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <service android:name="com.becandid.candid.services.RegistrationIntentService" android:exported="false" />
+        <activity android:name="com.becandid.candid.activities.GroupMeSearchActivity" />
+        <activity android:name="com.becandid.candid.activities.SeeAllBadgesActivity" android:parentActivityName="com.becandid.candid.activities.MainTabsActivity" />
+        <activity android:name="com.becandid.candid.activities.ChangeEndpointActivity" android:screenOrientation="portrait" android:parentActivityName="com.becandid.candid.activities.SplashActivity" />
+        <activity android:name="com.becandid.candid.activities.ImageCropActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.Holo.Dialog" android:name="com.becandid.candid.activities.VerifyAgeActivity" android:screenOrientation="portrait" />
+        <service android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService" android:exported="false" />
+        <service android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService" android:exported="false" />
+        <service android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService" android:exported="false" />
+        <meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule" />
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" />
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.becandid.candid" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver" android:exported="false" />
+        <service android:name="com.google.firebase.iid.FirebaseInstanceIdService" android:exported="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.becandid.candid.firebaseinitprovider" android:initOrder="100" />
+    </application>
+</manifest>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/noty_container" android:layout_width="match_parent" android:layout_height="wrap_content"
+    <RelativeLayout android:id="@id/noty_content_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp"
+        <RelativeLayout android:id="@id/noty_user_icon_container" android:layout_width="UNKNOWN_DATA_0x2801" android:layout_height="wrap_content" android:layout_alignParentLeft="true">
+            <TextView android:textSize="28dp" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@id/noty_user_icon" android:layout_width="UNKNOWN_DATA_0x1e01" android:layout_height="UNKNOWN_DATA_0x1e01" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/noty_action_icon" android:layout_width="UNKNOWN_DATA_0x1201" android:layout_height="UNKNOWN_DATA_0x1201" android:layout_marginTop="4dp" android:layout_marginRight="10dp" android:layout_alignParentRight="true" />
+        <TextView android:textStyle="bold" android:id="@id/noty_title" android:paddingRight="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_toLeftOf="@id/noty_action_icon" android:layout_toRightOf="@id/noty_user_icon_container" />
+        <RelativeLayout android:id="@id/noty_body_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/noty_action_icon" android:layout_toRightOf="@id/noty_user_icon_container" android:layout_below="@id/noty_title">
+            <TextView android:textColor="0x106000c" android:id="@id/noty_body" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <FrameLayout android:id="@id/noty_images_body" android:paddingTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/noty_body">
+                <ImageView android:id="@id/noty_sticker" android:visibility="gone" android:layout_width="UNKNOWN_DATA_0x3201" android:layout_height="UNKNOWN_DATA_0x3201" />
+                <ImageView android:id="@id/noty_body_image" android:visibility="gone" android:layout_width="UNKNOWN_DATA_0x6401" android:layout_height="UNKNOWN_DATA_0x6401" />
+            </FrameLayout>
+        </RelativeLayout>
+        <TextView android:textSize="12dp" android:id="@id/noty_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_toRightOf="@id/noty_user_icon_container" android:layout_below="@id/noty_body_container" />
+    </RelativeLayout>
+    <TextView android:id="@id/noty_separator" android:background="#dddddd" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x101" android:layout_marginTop="10dp" android:layout_below="@id/noty_content_container" style="?unknown_attr_ref: 1010208" />
+</RelativeLayout>

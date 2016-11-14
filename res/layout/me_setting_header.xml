@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/me_setting_container" android:background="#e0e0e0" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x2301">
+    <TextView android:textSize="14dp" android:textStyle="bold" android:textColor="0x106000c" android:id="@id/me_setting_name" android:paddingTop="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+</RelativeLayout>

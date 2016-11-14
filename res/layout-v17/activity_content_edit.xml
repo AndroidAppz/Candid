@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/content_edit_root" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="match_parent"
+    <RelativeLayout android:id="@id/content_edit_header" android:background="#f0f0f0" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x3001">
+        <ImageView android:id="@id/content_edit_back_container" android:layout_width="UNKNOWN_DATA_0x1e01" android:layout_height="match_parent" android:src="@drawable/back_chevron" android:scaleType="centerInside" android:onClick="backNavClick" />
+        <TextView android:textSize="18sp" android:textColor="#333333" android:id="@id/content_edit_header_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <View android:background="#cccccc" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x101" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/comment_edit_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="40dp" android:layout_marginRight="20dp" android:layout_below="@id/content_edit_header">
+        <TextView android:textSize="14sp" android:textColor="0x106000c" android:id="@id/content_edit_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" />
+        <FrameLayout android:id="@id/content_edit_container" android:background="@drawable/grey_comment_box" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x9601" android:layout_marginTop="10dp" android:layout_below="@id/content_edit_title">
+            <android.support.v7.widget.AppCompatEditText android:textSize="14sp" android:gravity="top|bottom|center_vertical|fill_vertical|center|fill" android:id="@id/content_edit_content" android:background="@um$h/com_facebook_login_view_com_facebook_confirm_logout" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|phone" />
+        </FrameLayout>
+        <TextView android:textSize="12sp" android:textColor="@color/gossip_grey" android:id="@id/content_edit_details" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_below="@id/content_edit_container" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/content_edit_button_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_marginBottom="5dp" android:layout_alignParentBottom="true">
+        <Button android:textColor="@color/gossip_grey" android:id="@id/content_edit_cancel" android:background="@drawable/grey_border_button" android:layout_width="UNKNOWN_DATA_0x7801" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_alignParentLeft="true" />
+        <Button android:textColor="0x106000b" android:id="@id/content_edit_save" android:background="@drawable/orange_button" android:layout_width="UNKNOWN_DATA_0x7801" android:layout_height="wrap_content" android:text="@string/save" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/content_edit_progress_bar" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true">
+        <ImageView android:background="@color/gossip_grey" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0.5" />
+        <ProgressBar android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_width="UNKNOWN_DATA_0x5001" android:layout_height="UNKNOWN_DATA_0x5001" style="@g$h/Widget_AppCompat_ProgressBar" />
+    </FrameLayout>
+</RelativeLayout>

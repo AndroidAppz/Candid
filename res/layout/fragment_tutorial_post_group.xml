@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent"
+    <RelativeLayout android:background="0x106000c" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0.75" />
+    <TextView android:textSize="24sp" android:textColor="0x106000b" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@id/tutorial_post_group_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_marginRight="40dp" android:text="@string/tutorial_post_group" android:layout_centerInParent="true" />
+    <ImageView android:background="@drawable/groups_discover_arrow_white" android:layout_width="UNKNOWN_DATA_0x3201" android:layout_height="UNKNOWN_DATA_0x6401" android:layout_marginLeft="70dp" android:layout_marginTop="96dp" android:layout_marginBottom="20dp" android:layout_above="@id/tutorial_post_group_text" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:scaleX="-1.0" />
+</RelativeLayout>

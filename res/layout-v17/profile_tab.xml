@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:background="#f0f0f0" app:layout_width="match_parent" app:layout_height="match_parent">
+    <android.support.design.widget.CoordinatorLayout app:id="@id/profile_container" app:layout_width="match_parent" app:layout_height="match_parent">
+        <android.support.design.widget.AppBarLayout app:id="@id/appbar" app:layout_width="match_parent" app:layout_height="wrap_content">
+            <LinearLayout app:orientation="vertical" app:id="@id/me_tab_header" app:background="#ffffff" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_scrollFlags="9">
+                <RelativeLayout app:id="@id/me_tab_header_top" app:background="#f0f0f0" app:paddingLeft="10dp" app:paddingTop="6dp" app:paddingBottom="10dp" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_collapseMode="0">
+                    <ImageView app:id="@id/badge_icon" app:layout_width="UNKNOWN_DATA_0x4601" app:layout_height="UNKNOWN_DATA_0x4601" app:src="@drawable/giver" app:layout_alignParentLeft="true" app:layout_centerInParent="true" app:layout_alignParentStart="true" />
+                    <LinearLayout app:orientation="vertical" app:paddingLeft="10dp" app:layout_width="match_parent" app:layout_height="match_parent" app:layout_toRightOf="@id/badge_icon" app:layout_toEndOf="@id/badge_icon">
+                        <RelativeLayout app:layout_width="match_parent" app:layout_height="wrap_content">
+                            <TextView app:textSize="18sp" app:textColor="#333333" app:id="@id/badge_title" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_alignParentLeft="true" app:layout_centerInParent="true" app:layout_alignParentStart="true" />
+                            <TextView app:textSize="16dp" app:textStyle="bold" app:textColor="0x106000b" app:id="@id/me_score" app:background="@drawable/orange_button_bg" app:paddingLeft="6dp" app:paddingTop="2dp" app:paddingRight="6dp" app:paddingBottom="2dp" app:visibility="gone" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginLeft="10dp" app:text="0" app:layout_toRightOf="@id/badge_title" app:layout_centerInParent="true" />
+                            <ImageView app:id="@id/me_tab_settings" app:layout_width="UNKNOWN_DATA_0x2401" app:layout_height="UNKNOWN_DATA_0x2401" app:src="@drawable/settings" app:scaleType="centerInside" app:layout_alignParentRight="true" app:layout_centerVertical="true" app:alpha="0.6" app:layout_alignParentEnd="true" />
+                        </RelativeLayout>
+                        <LinearLayout app:layout_width="match_parent" app:layout_height="wrap_content"
+                            <LinearLayout app:orientation="vertical" app:layout_width="UNKNOWN_DATA_0x1" app:layout_height="wrap_content" app:layout_weight="1.0">
+                                <TextView app:textSize="18sp" app:textColor="#333333" app:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" app:id="@id/fb_stat" app:layout_width="match_parent" app:layout_height="wrap_content" />
+                                <TextView app:textSize="12sp" app:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" app:layout_width="match_parent" app:layout_height="wrap_content" app:text="FB Friends" app:singleLine="true" />
+                            </LinearLayout>
+                            <LinearLayout app:orientation="vertical" app:layout_width="UNKNOWN_DATA_0x1" app:layout_height="wrap_content" app:layout_weight="1.0">
+                                <TextView app:textSize="18sp" app:textColor="#333333" app:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" app:id="@id/contacts_stat" app:layout_width="match_parent" app:layout_height="wrap_content" />
+                                <TextView app:textSize="12sp" app:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" app:layout_width="match_parent" app:layout_height="wrap_content" app:text="Contacts" app:singleLine="true" />
+                            </LinearLayout>
+                            <LinearLayout app:orientation="vertical" app:layout_width="UNKNOWN_DATA_0x1" app:layout_height="wrap_content" app:layout_weight="1.0">
+                                <TextView app:textSize="18sp" app:textColor="#333333" app:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" app:id="@id/post_stat" app:layout_width="match_parent" app:layout_height="wrap_content" />
+                                <TextView app:textSize="12sp" app:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" app:layout_width="match_parent" app:layout_height="wrap_content" app:text="Posts" app:singleLine="true" />
+                            </LinearLayout>
+                            <LinearLayout app:orientation="vertical" app:layout_width="UNKNOWN_DATA_0x1" app:layout_height="wrap_content" app:layout_weight="1.0">
+                                <TextView app:textSize="18sp" app:textColor="#333333" app:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" app:id="@id/group_stat" app:layout_width="match_parent" app:layout_height="wrap_content" />
+                                <TextView app:textSize="12sp" app:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" app:layout_width="match_parent" app:layout_height="wrap_content" app:text="Groups" app:singleLine="true" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+                <LinearLayout app:orientation="horizontal" app:id="@id/button_panel" app:padding="10dp" app:layout_width="match_parent" app:layout_height="wrap_content">
+                    <RelativeLayout app:id="@id/profile_connect_contact" app:background="@drawable/orange_button" app:padding="5dp" app:layout_width="UNKNOWN_DATA_0x1" app:layout_height="match_parent" app:layout_marginLeft="5dp" app:layout_marginRight="5dp" app:layout_weight="1.0">
+                        <ImageView app:layout_width="UNKNOWN_DATA_0x1e01" app:layout_height="UNKNOWN_DATA_0x1e01" app:src="@mipmap/ic_contacts" app:layout_alignParentLeft="true" app:layout_alignParentStart="true" />
+                        <TextView app:textSize="16dp" app:textColor="0x106000b" app:layout_width="wrap_content" app:layout_height="wrap_content" app:text="@string/connect" app:layout_centerInParent="true" />
+                    </RelativeLayout>
+                    <RelativeLayout app:id="@id/profile_connect_fb" app:background="@drawable/blue_button" app:padding="5dp" app:layout_width="UNKNOWN_DATA_0x1" app:layout_height="match_parent" app:layout_marginLeft="5dp" app:layout_marginRight="5dp" app:layout_weight="1.0">
+                        <ImageView app:background="@mipmap/ic_facebook" app:layout_width="UNKNOWN_DATA_0x1e01" app:layout_height="UNKNOWN_DATA_0x1e01" app:layout_alignParentLeft="true" app:layout_alignParentStart="true" />
+                        <TextView app:textSize="16dp" app:textColor="0x106000b" app:layout_width="wrap_content" app:layout_height="wrap_content" app:text="@string/connect" app:layout_centerInParent="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <View app:background="#f0f0f0" app:layout_width="match_parent" app:layout_height="UNKNOWN_DATA_0x101" />
+            </LinearLayout>
+            <android.support.design.widget.TabLayout app:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill" app:id="@id/me_subtabs" app:background="#ffffff" app:layout_width="match_parent" app:layout_height="UNKNOWN_DATA_0x1e01" app:tabIndicatorColor="#888888" />
+        </android.support.design.widget.AppBarLayout>
+        <com.becandid.candid.views.TabViewPager app:id="@id/me_view_pager" app:layout_width="match_parent" app:layout_height="match_parent" app:layout_below="@id/me_tab_header" app:layout_behavior="@g$g/appbar_scrolling_view_behavior" />
+        <LinearLayout app:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:orientation="vertical" app:id="@id/profile_spinny" app:visibility="gone" app:layout_width="match_parent" app:layout_height="match_parent">
+            <ProgressBar app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:layout_width="UNKNOWN_DATA_0x5001" app:layout_height="UNKNOWN_DATA_0x5001" style="@g$h/Widget_AppCompat_ProgressBar" />
+            <TextView app:textColor="@color/gossip_grey" app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:layout_width="wrap_content" app:layout_height="wrap_content" app:text="Loading..." />
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+    <FrameLayout app:id="@id/badge_info_container" app:visibility="gone" app:layout_width="match_parent" app:layout_height="match_parent" /> />

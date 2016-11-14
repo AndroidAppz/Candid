@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:orientation="vertical" app:id="@id/all_badges_container" app:layout_width="match_parent" app:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar app:id="@id/toolbar" app:background="@drawable/action_bar_bg" app:layout_width="match_parent" app:layout_height="wrap_content" app:minHeight="?attr/actionBarSize" app:titleTextColor="0x106000b">
+        <TextView app:textSize="18sp" app:textColor="#333333" app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:id="@id/toolbar_title" app:layout_width="wrap_content" app:layout_height="wrap_content" app:text="@string/badges" />
+    </android.support.v7.widget.Toolbar>
+    <FrameLayout app:layout_width="match_parent" app:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView app:id="@id/see_all_badges_recyclerview" app:background="0x106000b" app:paddingLeft="@dimen/activity_horizontal_margin" app:paddingTop="@dimen/activity_vertical_margin" app:paddingRight="@dimen/activity_horizontal_margin" app:paddingBottom="@dimen/activity_vertical_margin" app:layout_width="match_parent" app:layout_height="match_parent" />
+        <FrameLayout app:id="@id/badge_info_container" app:visibility="gone" app:layout_width="match_parent" app:layout_height="match_parent" /> />
+</LinearLayout>

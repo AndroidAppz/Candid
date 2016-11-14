@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:id="@id/create_post_root_relative" app:background="#ffffff" app:layout_width="match_parent" app:layout_height="match_parent">
+    <LinearLayout app:orientation="vertical" app:id="@id/create_post_root" app:background="#ffffff" app:layout_width="match_parent" app:layout_height="match_parent">
+        <RelativeLayout app:background="#f0f0f0" app:layout_width="match_parent" app:layout_height="UNKNOWN_DATA_0x3001">
+            <ImageView app:id="@id/backNav" app:layout_width="UNKNOWN_DATA_0x1e01" app:layout_height="match_parent" app:src="@drawable/back_chevron" app:scaleType="centerInside" app:onClick="backNavClick" />
+            <TextView app:textSize="18sp" app:textColor="#333333" app:layout_width="wrap_content" app:layout_height="wrap_content" app:text="Create a Post" app:layout_centerInParent="true" />
+            <View app:background="#cccccc" app:layout_width="match_parent" app:layout_height="UNKNOWN_DATA_0x101" app:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <LinearLayout app:gravity="top|bottom|center_vertical|fill_vertical|center|fill" app:orientation="horizontal" app:layout_width="match_parent" app:layout_height="UNKNOWN_DATA_0x3001">
+            <TextView app:textSize="18sp" app:textColor="#777777" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginLeft="6dp" app:text="Post in " />
+            <com.becandid.candid.views.AlwaysOnAutoCompleteView app:id="@id/group_name" app:background="@um$h/com_facebook_login_view_com_facebook_confirm_logout" app:focusable="true" app:focusableInTouchMode="true" app:layout_width="UNKNOWN_DATA_0x1" app:layout_height="match_parent" app:hint="group name" app:lines="1" app:popupBackground="@drawable/groups_dropdown" app:layout_weight="1.0" app:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|numberDecimal|phone" app:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious" app:popupElevation="3dp" />
+            <LinearLayout app:gravity="top|bottom|center_vertical|fill_vertical|center|fill" app:orientation="horizontal" app:id="@id/chosen_group_bubble" app:background="@drawable/grey_bubble" app:visibility="gone" app:layout_width="wrap_content" app:layout_height="wrap_content">
+                <TextView app:textSize="17sp" app:textColor="#ffffff" app:ellipsize="end" app:id="@id/chosen_group_name" app:layout_width="wrap_content" app:layout_height="wrap_content" app:lines="1" />
+                <ImageView app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginLeft="6dp" app:src="@drawable/clear_field" />
+            </LinearLayout>
+            <ImageView app:id="@id/post_create_group" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginLeft="60dp" app:layout_marginRight="6dp" app:src="@drawable/plus" app:onClick="createGroupClick" />
+        </LinearLayout>
+        <View app:background="#cccccc" app:layout_width="match_parent" app:layout_height="UNKNOWN_DATA_0x101" app:layout_alignParentBottom="true" />
+        <ScrollView app:id="@id/post_content_container" app:layout_width="match_parent" app:layout_height="UNKNOWN_DATA_0x1" app:layout_weight="1.0">
+            <LinearLayout app:orientation="vertical" app:layout_width="match_parent" app:layout_height="wrap_content">
+                <android.support.v7.widget.AppCompatEditText app:scrollbarStyle="insideInset" app:id="@id/post_caption" app:background="@um$h/com_facebook_login_view_com_facebook_confirm_logout" app:padding="6dp" app:scrollbars="vertical" app:layout_width="wrap_content" app:layout_height="match_parent" app:hint="Speak freely" app:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|phone" app:overScrollMode="always" />
+                <RelativeLayout app:id="@id/post_photo_outer" app:visibility="gone" app:layout_width="match_parent" app:layout_height="wrap_content">
+                    <ImageView app:id="@id/post_photo" app:layout_width="UNKNOWN_DATA_0xf001" app:layout_height="UNKNOWN_DATA_0xa001" app:layout_margin="6dp" app:scaleType="fitCenter" />
+                    <ImageView app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginRight="-6dp" app:src="@drawable/clear_field" app:layout_alignRight="@id/post_photo" app:layout_alignParentTop="true" app:onClick="clearPhoto" />
+                </RelativeLayout>
+                <RelativeLayout app:id="@id/post_link_outer" app:visibility="gone" app:layout_width="match_parent" app:layout_height="wrap_content"
+                    <RelativeLayout app:background="@drawable/grey_border" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_margin="5dp">
+                        <ImageView app:id="@id/link_preview_image" app:layout_width="UNKNOWN_DATA_0x5001" app:layout_height="UNKNOWN_DATA_0x3c01" app:scaleType="centerCrop" />
+                        <TextView app:textSize="14sp" app:textStyle="bold" app:textColor="#333333" app:ellipsize="end" app:id="@id/link_preview_title" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_marginLeft="5dp" app:layout_marginTop="2dp" app:lines="1" app:layout_toRightOf="@id/link_preview_image" />
+                        <TextView app:textSize="14sp" app:textColor="#333333" app:ellipsize="end" app:id="@id/link_preview_desc" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_marginTop="4dp" app:lines="1" app:layout_below="@id/link_preview_title" app:layout_alignLeft="@id/link_preview_title" />
+                        <TextView app:textSize="12sp" app:textColor="#888888" app:ellipsize="end" app:id="@id/link_preview_domain" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_marginTop="4dp" app:lines="1" app:layout_below="@id/link_preview_desc" app:layout_alignLeft="@id/link_preview_title" />
+                    </RelativeLayout>
+                    <ImageView app:id="@id/link_preview_clear" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginRight="1dp" app:src="@drawable/clear_field" app:layout_alignParentTop="true" app:layout_alignParentRight="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+        <com.venmo.view.TooltipView app:textSize="12dp" app:id="@id/tooltip" app:padding="5dp" app:visibility="gone" app:layout_width="UNKNOWN_DATA_0x9601" app:layout_height="UNKNOWN_DATA_0x3201" app:layout_marginLeft="90dp" app:layout_marginTop="16dp" app:text="@string/your_friends_can_see_this_post_as_usual" app:tooltipColor="#d3d3d3" app:arrowAlignment="0" />
+        <View app:background="#cccccc" app:layout_width="match_parent" app:layout_height="UNKNOWN_DATA_0x101" />
+        <RelativeLayout app:layout_width="match_parent" app:layout_height="UNKNOWN_DATA_0x3201">
+            <ImageView app:id="@id/cam_button" app:layout_width="UNKNOWN_DATA_0x3201" app:layout_height="UNKNOWN_DATA_0x3201" app:src="@drawable/camera_small_gray" app:scaleType="centerInside" app:layout_alignParentLeft="true" app:layout_centerVertical="true" />
+            <ImageView app:id="@id/link_button" app:layout_width="UNKNOWN_DATA_0x3201" app:layout_height="UNKNOWN_DATA_0x3201" app:src="@drawable/link_icon_grey" app:scaleType="centerInside" app:layout_toRightOf="@id/cam_button" />
+            <android.support.v7.widget.SwitchCompat app:id="@id/friend_switch" app:layout_width="wrap_content" app:layout_height="wrap_content" app:checked="true" app:layout_toRightOf="@id/link_button" app:layout_centerVertical="true" style="@g$h/TextAppearance_AppCompat_Widget_Switch" />
+            <TextView app:textColor="#666666" app:id="@id/friend_marker" app:layout_width="wrap_content" app:layout_height="wrap_content" app:text="@string/friends" app:layout_toRightOf="@id/friend_switch" app:layout_centerVertical="true" />
+            <Button app:textColor="#ffffff" app:id="@id/post_button" app:background="@drawable/orange_button_post" app:layout_width="wrap_content" app:layout_height="UNKNOWN_DATA_0x2401" app:layout_marginRight="8dp" app:text="Post" app:layout_alignParentRight="true" app:layout_centerVertical="true" app:onClick="savePost" app:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <FrameLayout app:id="@id/post_spinny" app:visibility="gone" app:clickable="true" app:layout_width="match_parent" app:layout_height="match_parent">
+        <ProgressBar app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:layout_width="UNKNOWN_DATA_0x5001" app:layout_height="UNKNOWN_DATA_0x5001" style="@g$h/Widget_AppCompat_ProgressBar" />
+    </FrameLayout>
+</FrameLayout>

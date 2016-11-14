@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:id="@id/onboarding_age" app:background="0x106000b" app:layout_width="match_parent" app:layout_height="match_parent">
+    <TextView app:textColor="#888888" app:id="@id/age_skip" app:paddingLeft="10dp" app:paddingRight="10dp" app:layout_width="wrap_content" app:layout_height="UNKNOWN_DATA_0x1e01" app:text="Skip" app:layout_alignParentTop="true" app:layout_alignParentRight="true" />
+    <TextView app:textSize="20sp" app:textColor="@color/gossip" app:id="@id/age_header" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginTop="40dp" app:text="Approximately, How Old Are You?" app:layout_centerHorizontal="true" />
+    <TextView app:textSize="16sp" app:textColor="#666" app:id="@id/age_subheader" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginLeft="20dp" app:layout_marginTop="10dp" app:layout_marginRight="20dp" app:text="This information will help us recommend the right groups for you." app:layout_below="@id/age_header" app:layout_centerHorizontal="true" />
+    <RelativeLayout app:orientation="horizontal" app:id="@id/age_button_container" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginTop="40dp" app:layout_below="@id/age_subheader" app:layout_centerHorizontal="true"
+        <RelativeLayout app:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginRight="5dp" app:layout_toLeftOf="@g$e/spacer" app:layout_alignBottom="@id/age_old_box">
+            <ImageView app:id="@id/age_image_young" app:layout_width="wrap_content" app:layout_height="wrap_content" app:src="@drawable/onboarding_age_young" app:scaleType="centerInside" app:layout_centerHorizontal="true" />
+            <Button app:textColor="0x106000b" app:id="@id/age_under" app:background="@drawable/orange_button" app:layout_width="UNKNOWN_DATA_0xfa01" app:layout_height="UNKNOWN_DATA_0x3001" app:layout_marginTop="30dp" app:text="Under 18" app:layout_below="@id/age_image_young" />
+        </RelativeLayout>
+        <View app:id="@g$e/spacer" app:layout_width="UNKNOWN_DATA_0x1" app:layout_height="UNKNOWN_DATA_0x1" app:layout_centerInParent="true" />
+        <RelativeLayout app:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:id="@id/age_old_box" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginLeft="5dp" app:layout_toRightOf="@g$e/spacer">
+            <ImageView app:id="@id/age_image_old" app:layout_width="wrap_content" app:layout_height="wrap_content" app:src="@drawable/onboarding_age_old" app:scaleType="centerInside" app:layout_centerHorizontal="true" />
+            <Button app:textColor="0x106000b" app:id="@id/age_over" app:background="@drawable/orange_button" app:layout_width="UNKNOWN_DATA_0xfa01" app:layout_height="UNKNOWN_DATA_0x3001" app:layout_marginTop="30dp" app:text="Over 18" app:layout_below="@id/age_image_old" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView app:textColor="@color/privacy_blue" app:id="@id/age_privacy" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginTop="20dp" app:text="@string/privacy" app:layout_below="@id/age_button_container" app:layout_centerHorizontal="true" />
+    <FrameLayout app:id="@id/age_spinny" app:visibility="gone" app:clickable="true" app:layout_width="match_parent" app:layout_height="match_parent" app:layout_centerInParent="true">
+        <ImageView app:background="@color/gossip_grey" app:layout_width="match_parent" app:layout_height="match_parent" app:alpha="0.5" />
+        <ProgressBar app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:layout_width="UNKNOWN_DATA_0x5001" app:layout_height="UNKNOWN_DATA_0x5001" style="@g$h/Widget_AppCompat_ProgressBar" />
+    </FrameLayout>
+</android.support.percent.PercentRelativeLayout>

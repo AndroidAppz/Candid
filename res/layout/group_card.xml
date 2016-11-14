@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:background="@drawable/group_card_shadow" app:layout_width="match_parent" app:layout_height="match_parent">
+    <ImageView app:id="@id/group_image" app:layout_width="match_parent" app:layout_height="match_parent" app:scaleType="centerCrop" />
+    <LinearLayout app:orientation="vertical" app:layout_width="match_parent" app:layout_height="match_parent" app:layout_margin="15dp">
+        <TextView app:textSize="24sp" app:textStyle="bold" app:textColor="#ffffff" app:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:id="@id/group_name" app:layout_width="match_parent" app:layout_height="UNKNOWN_DATA_0x1" app:layout_weight="1.0" />
+        <LinearLayout app:orientation="horizontal" app:layout_width="match_parent" app:layout_height="wrap_content">
+            <TextView app:textColor="#ffffff" app:id="@id/group_stats" app:layout_width="match_parent" app:layout_height="wrap_content" app:text="5 friends   7 members   3 posts" />
+        </LinearLayout>
+        <org.apmem.tools.layouts.FlowLayout app:orientation="horizontal" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_marginTop="8dp" app:layout_marginBottom="8dp">
+            <TextView app:textSize="12sp" app:textColor="#ffffff" app:id="@id/group_tag_0" app:background="@drawable/grey_bubble" app:paddingRight="12dp" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginRight="10dp" />
+            <TextView app:textSize="12sp" app:textColor="#ffffff" app:id="@id/group_tag_1" app:background="@drawable/grey_bubble" app:paddingRight="12dp" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginRight="10dp" />
+            <TextView app:textSize="12sp" app:textColor="#ffffff" app:id="@id/group_tag_2" app:background="@drawable/grey_bubble" app:paddingRight="12dp" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginRight="10dp" />
+        </org.apmem.tools.layouts.FlowLayout>
+        <TextView app:textSize="10dp" app:textColor="0x106000b" app:id="@id/group_created_by_friend" app:visibility="gone" app:layout_width="wrap_content" app:layout_height="wrap_content" app:text="@string/created_by_a_friend" />
+        <TextView app:textSize="12sp" app:textColor="#ffffff" app:id="@id/group_description" app:layout_width="wrap_content" app:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView app:id="@id/group_join_stamp" app:visibility="gone" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginLeft="25dp" app:layout_marginTop="40dp" app:src="@drawable/join_overlay" app:alpha="0.0" app:rotation="-25.0" />
+    <ImageView app:id="@id/group_skip_stamp" app:visibility="gone" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginTop="40dp" app:layout_marginRight="25dp" app:src="@drawable/skip_overlay" app:layout_alignParentRight="true" app:alpha="0.0" app:rotation="25.0" />
+</RelativeLayout>

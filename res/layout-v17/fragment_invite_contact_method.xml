@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@id/whole_post_snippet" android:layout_width="match_parent" android:layout_height="match_parent"
+        <RelativeLayout android:id="@id/invite_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <ImageView android:id="@id/contacts_close" android:padding="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/close_x" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:alpha="0.6" />
+            <TextView android:textSize="22sp" android:textColor="@color/gossip" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@id/header" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="60dp" android:text="Invite Friends to Candid" />
+            <TextView android:textSize="15sp" android:textColor="#333333" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@id/subheader" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="10dp" android:layout_marginRight="15dp" android:text="You can now choose to send texts anonymously or let your friends know you've sent a text" android:layout_below="@id/header" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/invite_method" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="30dp" android:layout_marginTop="20dp" android:layout_marginRight="30dp" android:layout_marginBottom="20dp" android:layout_above="@id/invite_footer" android:layout_below="@id/invite_header" android:layout_centerVertical="true">
+            <RelativeLayout android:id="@id/anon_placeholder" android:background="@drawable/empty_checkmark_bg" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x1" android:layout_weight="1.0">
+                <ImageView android:id="@id/anon_checkmark" android:layout_width="UNKNOWN_DATA_0x3201" android:layout_height="UNKNOWN_DATA_0x3201" android:src="@drawable/empty_checkmark" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+                <TextView android:textSize="20dp" android:textStyle="bold" android:textColor="0x106000e" android:id="@id/anon_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/anon_text" android:layout_toRightOf="@id/anon_checkmark" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <Space android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x1e01" />
+            <RelativeLayout android:id="@id/known_placeholder" android:background="@drawable/empty_checkmark_bg" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x1" android:layout_weight="1.0">
+                <ImageView android:id="@id/known_checkmark" android:layout_width="UNKNOWN_DATA_0x3201" android:layout_height="UNKNOWN_DATA_0x3201" android:src="@drawable/empty_checkmark" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+                <TextView android:textSize="20dp" android:textStyle="bold" android:textColor="0x106000e" android:id="@id/known_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/known_text" android:layout_toRightOf="@id/known_checkmark" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/invite_footer" android:paddingLeft="30dp" android:paddingTop="30dp" android:paddingRight="30dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <Button android:enabled="false" android:textColor="#ffffff" android:id="@id/method_continue" android:background="@drawable/orange_button_bg" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x2801" android:text="@string/groups_continue" />
+            <TextView android:textSize="12sp" android:textColor="#999999" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="25dp" android:text="@string/invite_disclaimer" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:orientation="vertical" app:background="0x106000b" app:layout_width="match_parent" app:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar app:id="@id/toolbar" app:background="@drawable/action_bar_bg" app:layout_width="match_parent" app:layout_height="wrap_content" app:minHeight="?attr/actionBarSize" app:titleTextColor="0x106000b">
+        <TextView app:textSize="18sp" app:textColor="#333333" app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:id="@id/toolbar_title" app:layout_width="wrap_content" app:layout_height="wrap_content" app:text="@string/edit_endpoint" />
+    </android.support.v7.widget.Toolbar>
+    <EditText app:enabled="false" app:textSize="20dp" app:id="@id/endpoint" app:background="@drawable/white_rounded_bg" app:padding="10dp" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_marginTop="20dp" app:layout_marginBottom="10dp" app:text="https://becandid.com/" />
+    <RadioGroup app:orientation="vertical" app:id="@id/radio_group" app:layout_width="match_parent" app:layout_height="wrap_content">
+        <RadioButton app:id="@id/radio_prod" app:layout_width="wrap_content" app:layout_height="wrap_content" app:checked="true" app:text="Production" app:onClick="onRadioButtonClicked" />
+        <RadioButton app:id="@id/radio_staging" app:layout_width="wrap_content" app:layout_height="wrap_content" app:text="Staging" app:onClick="onRadioButtonClicked" />
+        <RadioButton app:id="@id/radio_custom" app:layout_width="wrap_content" app:layout_height="wrap_content" app:text="Custom" app:onClick="onRadioButtonClicked" />
+    </RadioGroup>
+    <TextView app:textSize="20dp" app:textColor="0x106000b" app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:background="@drawable/orange_button" app:padding="10dp" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginTop="20dp" app:text="Save Endpoint" app:onClick="onSaveEndpoint" />
+</LinearLayout>

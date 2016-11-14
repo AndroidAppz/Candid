@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView android:id="@id/contacts_recycler" android:paddingTop="40dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/contacts_header" />
+    <FrameLayout android:id="@id/contacts_search_outer" android:background="#dddddd" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x2801" android:layout_below="@id/contacts_header">
+        <LinearLayout android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:background="@drawable/white_search_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:src="@drawable/search_mag" />
+            <EditText android:id="@id/contacts_search" android:background="@um$h/com_facebook_login_view_com_facebook_confirm_logout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:lines="1" android:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|phone" android:imeOptions="actionNone|actionGo|actionSearch|actionNext|actionDone|actionPrevious" />
+        </LinearLayout>
+    </FrameLayout>
+    <RelativeLayout android:id="@id/contacts_header" android:background="#f0f0f0" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x3001">
+        <ImageView android:id="@id/backNav" android:layout_width="UNKNOWN_DATA_0x1e01" android:layout_height="match_parent" android:src="@drawable/back_chevron" android:scaleType="centerInside" android:onClick="backNavClick" />
+        <TextView android:textSize="18sp" android:textColor="#333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Invite Contacts" android:layout_centerInParent="true" />
+        <Button android:enabled="false" android:textColor="#ffffff" android:id="@id/send_invites_button" android:background="@drawable/orange_button_bg" android:layout_width="wrap_content" android:layout_height="UNKNOWN_DATA_0x1e01" android:layout_marginRight="3dp" android:text="Invite (0)" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <View android:background="#cccccc" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x101" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/contacts_spinny" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true">
+        <ImageView android:background="@color/gossip_grey" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0.5" />
+        <ProgressBar android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_width="UNKNOWN_DATA_0x5001" android:layout_height="UNKNOWN_DATA_0x5001" style="@g$h/Widget_AppCompat_ProgressBar" />
+    </FrameLayout>
+</RelativeLayout>

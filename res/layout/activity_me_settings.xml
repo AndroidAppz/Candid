@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent"
+    <RelativeLayout android:id="@id/settings_header" android:background="#f0f0f0" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x3001">
+        <ImageView android:id="@id/backNav" android:layout_width="UNKNOWN_DATA_0x1e01" android:layout_height="match_parent" android:src="@drawable/back_chevron" android:scaleType="centerInside" android:onClick="backNavClick" />
+        <TextView android:textSize="18sp" android:textColor="#333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Settings" android:layout_centerInParent="true" />
+        <View android:background="#cccccc" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x101" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <View android:background="#e0e0e0" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/settings_header" />
+    <android.support.v7.widget.RecyclerView android:id="@id/me_settings_list" android:background="#e0e0e0" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/settings_header" />
+    <TextView android:textSize="12sp" android:textColor="#aaaaaa" android:id="@id/version_number" android:paddingTop="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/me_settings_list" android:layout_centerHorizontal="true" />
+</RelativeLayout>

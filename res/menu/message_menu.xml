@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res-auto">
+    <item app:id="@id/message_menu_copy_text" app:visible="true" app:title="@string/message_menu_copy_text" app:showAsAction="always" />
+    <item app:id="@id/message_menu_save_image" app:visible="true" app:title="@string/message_menu_save_image" app:showAsAction="always" />
+    <item app:id="@id/message_menu_report" app:visible="true" app:title="@string/message_menu_report" app:showAsAction="always" />
+</menu>

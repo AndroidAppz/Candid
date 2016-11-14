@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:id="@id/crop_view_container" app:background="#313131" app:layout_width="match_parent" app:layout_height="match_parent">
+    <FrameLayout app:id="@id/cropper_frame_layout" app:background="#d5d5d5" app:layout_width="match_parent" app:layout_height="wrap_content">
+        <com.becandid.thirdparty.nocropper.CropperView app:id="@id/cropper_view" app:background="#f6f6f6" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_alignParentTop="true" app:grid_color="#ff4081" app:grid_thickness="0,8dp" app:grid_opacity="0.8" />
+    </FrameLayout>
+    <ImageView app:id="@id/crop_button" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginBottom="20dp" app:src="@drawable/crop_save" app:layout_alignParentBottom="true" app:layout_centerHorizontal="true" />
+    <ProgressBar app:id="@um$d/progress_bar" app:visibility="gone" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_centerInParent="true" />
+</RelativeLayout>
