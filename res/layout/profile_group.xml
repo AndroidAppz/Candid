@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:background="@drawable/white_rounded_bg" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_margin="4dp">
-    <ImageView app:id="@id/group_image" app:scaleType="centerCrop" app:layout_widthPercent="100%" app:layout_aspectRatio="100%" />
-    <TextView app:textSize="16sp" app:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:id="@id/group_name" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_marginLeft="8dp" app:layout_marginTop="8dp" app:layout_marginRight="8dp" app:layout_marginBottom="5dp" app:layout_below="@id/group_image" />
-    <TextView app:textSize="12sp" app:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:id="@id/group_num_members" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_marginBottom="5dp" app:layout_below="@id/group_name" />
-    <TextView app:textSize="11sp" app:textStyle="bold" app:textColor="#ffffff" app:id="@id/moderator_badge" app:background="@drawable/black_translucent_pill" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_margin="5dp" app:text="MODERATOR" app:layout_alignParentLeft="true" app:layout_alignParentTop="true" />
-</android.support.percent.PercentRelativeLayout>

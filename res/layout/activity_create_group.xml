@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:orientation="vertical" app:layout_width="match_parent" app:layout_height="match_parent">
-    <android.support.v7.widget.Toolbar app:id="@id/toolbar" app:background="@drawable/action_bar_bg" app:layout_width="match_parent" app:layout_height="wrap_content" app:minHeight="?attr/actionBarSize" app:titleTextColor="0x106000b">
-        <TextView app:textSize="18sp" app:textColor="#333333" app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:id="@id/toolbar_title" app:layout_width="wrap_content" app:layout_height="wrap_content" app:text="@string/create_a_group" />
-    </android.support.v7.widget.Toolbar>
-    <FrameLayout app:id="@id/placeholder" app:background="0x106000b" app:layout_width="match_parent" app:layout_height="match_parent" />
-</LinearLayout>

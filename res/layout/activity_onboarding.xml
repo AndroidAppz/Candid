@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:id="@id/container" app:fitsSystemWindows="true" app:layout_width="match_parent" app:layout_height="match_parent">
-    <FrameLayout app:id="@id/onboarding_placeholder" app:background="0x106000b" app:layout_width="match_parent" app:layout_height="match_parent" />
-</RelativeLayout>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res-auto">
-    <item app:id="@id/share_menu_facebook" app:visible="true" app:title="@string/share_facebook" app:showAsAction="always" />
-    <item app:id="@id/share_menu_twitter" app:visible="true" app:title="@string/share_twitter" app:showAsAction="always" />
-    <item app:id="@id/share_menu_text" app:visible="true" app:title="@string/share_text" app:showAsAction="always" />
-    <item app:id="@id/share_menu_others" app:visible="true" app:title="@string/share_others" app:showAsAction="always" />
-</menu>

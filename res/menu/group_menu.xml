@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res-auto">
-    <item app:id="@id/group_menu_details" app:visible="true" app:title="@string/group_details" app:showAsAction="always" />
-    <item app:id="@id/group_menu_leave" app:visible="true" app:title="@string/leave_group" app:showAsAction="always" />
-    <item app:id="@id/group_menu_join" app:visible="true" app:title="@string/join_group" app:showAsAction="always" />
-    <item app:id="@id/group_menu_delete" app:visible="true" app:title="@string/delete_group" app:showAsAction="always" />
-    <item app:id="@id/group_menu_report" app:visible="true" app:title="@string/report_group" app:showAsAction="always" />
-    <item app:id="@id/group_menu_edit" app:visible="true" app:title="@string/edit_group" app:showAsAction="always" />
-</menu>

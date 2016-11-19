@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res-auto">
-    <item app:id="@id/me_settings_disown_account" app:visible="true" app:title="@string/disown_account" app:showAsAction="always" />
-    <item app:id="@id/me_settings_about" app:visible="true" app:title="@string/about_candid" app:showAsAction="always" />
-    <item app:id="@id/me_settings_terms" app:visible="true" app:title="Terms of Service" app:showAsAction="UNKNOWN_DATA_0x0" />
-    <item app:id="@id/me_settings_guidelines" app:visible="true" app:title="Community Guidelines" app:showAsAction="UNKNOWN_DATA_0x0" />
-    <item app:id="@id/me_settings_cancel" app:visible="true" app:title="Cancel" app:showAsAction="UNKNOWN_DATA_0x0" />
-    <item app:id="@id/me_settings_endpoint" app:visible="false" app:title="Change Endpoint" app:showAsAction="UNKNOWN_DATA_0x0" />
-</menu>

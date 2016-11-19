@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
-    <android.support.v7.widget.RecyclerView android:id="@id/choose_photo_suggestions" android:padding="1dp" android:visibility="gone" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x6401" />
-    <ProgressBar android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@id/choose_photo_loading" android:layout_width="UNKNOWN_DATA_0x3c01" android:layout_height="UNKNOWN_DATA_0x3c01" android:layout_margin="20dp" style="@g$h/Widget_AppCompat_ProgressBar" />
-    <TextView android:textSize="18sp" android:textColor="#333333" android:id="@id/choose_photo_take_photo" android:background="?attr/selectableItemBackground" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Take a Photo" />
-    <TextView android:textSize="18sp" android:textColor="#333333" android:id="@id/choose_photo_library" android:background="?attr/selectableItemBackground" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Choose from Photos" />
-    <TextView android:textSize="18sp" android:textColor="#333333" android:id="@id/choose_photo_cancel" android:background="?attr/selectableItemBackground" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Cancel" />
-</merge>

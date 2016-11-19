@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:orientation="vertical" app:id="@id/activity_outer" app:layout_width="match_parent" app:layout_height="match_parent" app:layout_behavior="@g$g/appbar_scrolling_view_behavior">
-    <android.support.v4.widget.SwipeRefreshLayout app:id="@id/activity_refresh" app:layout_width="match_parent" app:layout_height="match_parent" app:layout_below="@id/activity_header">
-        <android.support.v7.widget.RecyclerView app:id="@id/activity_recycler" app:paddingBottom="50dp" app:scrollbars="vertical" app:clipToPadding="false" app:layout_width="match_parent" app:layout_height="match_parent" />
-    </android.support.v4.widget.SwipeRefreshLayout>
-    <TextView app:textStyle="italic" app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:id="@id/activity_empty" app:visibility="gone" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginBottom="60dp" app:text="@string/empty_notifications" />
-</FrameLayout>

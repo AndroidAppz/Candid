@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res-auto">
-    <item app:id="@id/fullscreen_menu_save" app:visible="false" app:title="Save image" app:showAsAction="always" />
-    <item app:id="@id/fullscreen_menu_exit" app:visible="true" app:title="Close" app:showAsAction="always" />
-</menu>

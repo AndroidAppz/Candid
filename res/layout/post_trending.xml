@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:orientation="horizontal" android:id="@id/post_trending" android:paddingTop="3dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <ImageView android:id="@id/post_trending_drawable" android:paddingRight="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/trending" />
-    <TextView android:id="@id/post_trending_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/trending" android:textAllCaps="true" />
-</LinearLayout>

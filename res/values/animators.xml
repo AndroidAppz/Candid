@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <animator name="fragment_slide_left_enter">res/animator/fragment_slide_left_enter.xml</animator>
-    <animator name="fragment_slide_left_exit">res/animator/fragment_slide_left_exit.xml</animator>
-    <animator name="fragment_slide_right_enter">res/animator/fragment_slide_right_enter.xml</animator>
-    <animator name="fragment_slide_right_exit">res/animator/fragment_slide_right_exit.xml</animator>
-</resources>

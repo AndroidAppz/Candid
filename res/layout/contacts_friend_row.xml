@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="5dp" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x2801">
-    <View android:id="@id/animal_bg" android:layout_width="UNKNOWN_DATA_0x2001" android:layout_height="UNKNOWN_DATA_0x2001" android:layout_marginLeft="3dp" android:layout_marginTop="4dp" />
-    <TextView android:textSize="30sp" android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@id/contact_photo" android:layout_width="UNKNOWN_DATA_0x2001" android:layout_height="UNKNOWN_DATA_0x2001" android:layout_margin="4dp" android:fontFamily="CandidAnimals" />
-    <Button android:textColor="#ffffff" android:id="@id/contact_button" android:background="@drawable/orange_button_bg" android:layout_width="wrap_content" android:layout_height="UNKNOWN_DATA_0x1c01" android:layout_marginRight="3dp" android:text="Invite" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-    <TextView android:textSize="16sp" android:textColor="#333333" android:ellipsize="middle" android:gravity="top|bottom|center_vertical|fill_vertical|center|fill" android:id="@id/contact_name" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="6dp" android:lines="1" android:layout_toLeftOf="@id/contact_button" android:layout_toRightOf="@id/contact_photo" />
-</RelativeLayout>

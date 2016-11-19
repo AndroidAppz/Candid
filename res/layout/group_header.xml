@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
-    <TextView android:textSize="12sp" android:textColor="#999999" android:gravity="top|bottom|center_vertical|fill_vertical|center|fill" android:id="@id/group_search_btn" android:background="@drawable/white_search_bg" android:layout_width="wrap_content" android:layout_height="UNKNOWN_DATA_0x2801" android:layout_marginRight="60dp" android:text="@string/search_hint" android:drawableLeft="@drawable/search_mag" android:drawablePadding="6dp" android:layout_toLeftOf="@id/create_group_btn" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
-    <LinearLayout android:id="@id/create_group_btn" android:background="@drawable/orange_button_bg" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
-        <TextView android:textSize="20sp" android:textColor="0x106000b" android:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill" android:id="@id/create_group_plus" android:paddingRight="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" />
-        <TextView android:textSize="16sp" android:textColor="0x106000b" android:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill" android:id="@id/create_group_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Create" />
-    </LinearLayout>
-</RelativeLayout>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:orientation="vertical" app:layout_width="match_parent" app:layout_height="match_parent" app:layout_behavior="@g$g/appbar_scrolling_view_behavior">
-    <com.becandid.candid.views.GroupHeaderView app:id="@id/group_header" app:padding="10dp" app:layout_width="match_parent" app:layout_height="UNKNOWN_DATA_0x3001" />
-    <android.support.v7.widget.RecyclerView app:id="@id/me_groups" app:paddingBottom="50dp" app:clipToPadding="false" app:layout_width="match_parent" app:layout_height="match_parent" />
-</LinearLayout>

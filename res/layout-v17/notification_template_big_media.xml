@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@g$e/status_bar_latest_event_content" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x8001">
-    <ImageView android:id="@g$e/icon" android:layout_width="UNKNOWN_DATA_0x7f0a0087" android:layout_height="UNKNOWN_DATA_0x7f0a0086" android:scaleType="centerCrop" />
-    <include android:layout_width="UNKNOWN_DATA_0x3001" android:layout_height="UNKNOWN_DATA_0x3001" android:layout_marginLeft="2dp" android:layout_marginRight="2dp" android:layout_alignParentRight="true" layout="@g$f/notification_media_cancel_action" />
-    <include android:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@g$d/notification_large_icon_width" android:layout_toLeftOf="@g$e/cancel_action" android:layout_marginStart="@g$d/notification_large_icon_width" android:layout_toStartOf="@g$e/cancel_action" layout="@g$f/notification_template_lines" />
-    <LinearLayout android:orientation="horizontal" android:id="@g$e/media_actions" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x3001" android:layout_marginLeft="12dp" android:layout_marginRight="12dp" android:layout_alignParentBottom="true" android:layoutDirection="ltr" />
-    <ImageView android:id="@g$e/action_divider" android:background="?unknown_attr_ref: 101032c" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x101" android:layout_above="@g$e/media_actions" />
-</RelativeLayout>
