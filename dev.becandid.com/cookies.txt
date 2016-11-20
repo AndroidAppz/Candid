@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.becandid.com	TRUE	/	FALSE	1999999999	__cfduid	d77b4d589105d21524dde6c9b9dae98031479645945
+.becandid.com	TRUE	/	FALSE	1999999999	s	!wy19x5YjYZt6R6Venk1GYQ==?gAJVAXN9cQFVBmV4cF9pZE1bGnOGcQIu"
+
