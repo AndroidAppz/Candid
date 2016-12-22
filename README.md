@@ -1,0 +1,2 @@
+# Candid
+com.becandid.candid
