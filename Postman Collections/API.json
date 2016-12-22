@@ -1,0 +1,1693 @@
+{
+  "info": {
+    "name": "Candid",
+    "_postman_id": "f1adde77-dd54-d55c-87c0-6461599d4d87",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "8f373abc-009e-5ceb-e056-ab400159610b",
+      "name": "Posts",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "24188f07-00aa-21b5-49fe-195744d91018",
+          "name": "Get Post Info",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "try {",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    tests[\"Candid success\"] = jsonData.success === true;",
+                  "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+                  "} catch(err) {",
+                  "    console.log(err.message);",
+                  "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://becandid.com/api/get_post_info",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Cookie",
+                "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "a19ReldebzdrT0nCgVFbVUlRW1FOUVtRTmE5QH1hOX9zU3RVfWlYREQ="
+            },
+            "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/get_post_info\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/feed/new\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"a19ReldebzdrT0nCgVFbVUlRW1FOUVtRTmE5QH1hOX9zU3RVfWlYREQ=\\\""
+          }
+        },
+        {
+          "_postman_id": "961839f2-7dc4-caef-e2b5-d208878632ab",
+          "name": "Add Post",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "try {",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    tests[\"Candid success\"] = jsonData.success === true;",
+                  "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+                  "} catch(err) {",
+                  "    console.log(err.message);",
+                  "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "Add Post",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Cookie",
+                "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "YTpRfWtfSW1oXlhAVltUdGA5TX5rTnN9aXE4UmtfVTdRW1B+YFpcwoBUT1lzajpYc1RxSX5pOlU3U3BhdGp0c3NpdFnCgV85WXdqOU1waU5dcldfWcKAa15cRA=="
+            },
+            "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/add_post\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/feed/new\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"YTpRfWtfSW1oXlhAVltUdGA5TX5rTnN9aXE4UmtfVTdRW1B+YFpcwoBUT1lzajpYc1RxSX5pOlU3U3BhdGp0c3NpdFnCgV85WXdqOU1waU5dcldfWcKAa15cRA==\\\""
+          }
+        },
+        {
+          "_postman_id": "c6e84473-02ce-9c52-da42-4a9d0e6e4eb1",
+          "name": "Add Post (Link)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "try {",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    tests[\"Candid success\"] = jsonData.success === true;",
+                  "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+                  "} catch(err) {",
+                  "    console.log(err.message);",
+                  "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://becandid.com/api/add_post",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Cookie",
+                "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "YTpRfWtfSW1oXlhAVltUdGA5TX5rTnN9aXE3dGF1UXdhXjxyajhAcmhfVW9gdH9zYUs4N2p1XXNRdE03a09Rd2B1XTdoXkB8XzlvfWo6WEBoT1k3ak9Uc1Q3THNUcmBzVHJhdWU2PnRpT15/ZD5GwoJZZFtZXcKBW8KBcV5SwpR9T3PCl3hSdlvChmtrwpTCgX5iW8KOwpnCpMKbwol3wofCrMKMZ3/CpsKawoDCi8Kqwp1ucXfClHLCl8KqwqbCscKTwrXCkcKcwpLDgcKvwpPCtcK6wpnCpMKaw4nCt8KGwo7Dj8K5wp/CqsOIwr7DlcKyw5fCrMKnw43Dl8K9w5HCnsOfXlNCLF1TNXFGUEZARlBFc11TMWZeRFJnXVMxakZQRXNgLlJlX0NCalZUSWhJZ0loSWY+bF5TQmpWVEloSWdJaElmPi5dU05oXi9JaElmPmReaU1oSWY+cF4vRmhIZVF1SUFgcmAvYG5UTE1wQzxcW1VqRWg7NB1TTFdTUzNPJl1FKDZJPzQiTiQtIU4wQio7NhkmSCglGTcXMwrDtig+GTwPCCgrIAXDvCcHI8O5w6sYw6cJH8O+G8OxHA8Ew6AWw7PDvMOwHgDDvAwLw7rDk8OxEgPDr8OwFFFMaHNdXFVwUW5GOWY3WXJncVlwUW5Gd2Y2PXZlWzlyTlhNe15xPX1QbV5xZVs5bGZKPXdlWzl2XDdafWZINXNoTFZ7Z31ZflVXWX1WbVl9VnJoN2h9OXJmNj1yZktZeV02PXhRW1FOUXVZd2tOf3NXXGt9aTlremFaYW9rT1nCgGheUThrTnN9aXNAOGp0fkBoT1k3ak9Uc1Q3THNUcmBzVHJhdWk5QHVpTlx8YDlAe1F1WTxqTlxAaU5zfGh+REQ="
+            },
+            "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/add_post\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/feed/new\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"YTpRfWtfSW1oXlhAVltUdGA5TX5rTnN9aXE3dGF1UXdhXjxyajhAcmhfVW9gdH9zYUs4N2p1XXNRdE03a09Rd2B1XTdoXkB8XzlvfWo6WEBoT1k3ak9Uc1Q3THNUcmBzVHJhdWU2PnRpT15/ZD5GwoJZZFtZXcKBW8KBcV5SwpR9T3PCl3hSdlvChmtrwpTCgX5iW8KOwpnCpMKbwol3wofCrMKMZ3/CpsKawoDCi8Kqwp1ucXfClHLCl8KqwqbCscKTwrXCkcKcwpLDgcKvwpPCtcK6wpnCpMKaw4nCt8KGwo7Dj8K5wp/CqsOIwr7DlcKyw5fCrMKnw43Dl8K9w5HCnsOfXlNCLF1TNXFGUEZARlBFc11TMWZeRFJnXVMxakZQRXNgLlJlX0NCalZUSWhJZ0loSWY+bF5TQmpWVEloSWdJaElmPi5dU05oXi9JaElmPmReaU1oSWY+cF4vRmhIZVF1SUFgcmAvYG5UTE1wQzxcW1VqRWg7NB1TTFdTUzNPJl1FKDZJPzQiTiQtIU4wQio7NhkmSCglGTcXMwrDtig+GTwPCCgrIAXDvCcHI8O5w6sYw6cJH8O+G8OxHA8Ew6AWw7PDvMOwHgDDvAwLw7rDk8OxEgPDr8OwFFFMaHNdXFVwUW5GOWY3WXJncVlwUW5Gd2Y2PXZlWzlyTlhNe15xPX1QbV5xZVs5bGZKPXdlWzl2XDdafWZINXNoTFZ7Z31ZflVXWX1WbVl9VnJoN2h9OXJmNj1yZktZeV02PXhRW1FOUXVZd2tOf3NXXGt9aTlremFaYW9rT1nCgGheUThrTnN9aXNAOGp0fkBoT1k3ak9Uc1Q3THNUcmBzVHJhdWk5QHVpTlx8YDlAe1F1WTxqTlxAaU5zfGh+REQ=\\\""
+          }
+        },
+        {
+          "_postman_id": "4359d0eb-d484-a2b2-04fd-0e661cbd7518",
+          "name": "Add Post (Image)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "try {",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    tests[\"Candid success\"] = jsonData.success === true;",
+                  "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+                  "} catch(err) {",
+                  "    console.log(err.message);",
+                  "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://becandid.com/api/add_post",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Cookie",
+                "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "YTpRfWtfSW1oXlhAVltUdGA5TX5rTnN9aXE3dGF1UXdhXjxyajhAcmhfVW9gdH9zYUs4N2p1XXNRdVV9a19RcWFdQDhqdH5AaE9ZN2pKXMKBWFpcwoBZcFzCgFl0f3doOV3CgVN0c3tcW2lyasKBPsKEWMKFQnZxZ1dIdUZKfntLZsKPdE5WwpJpdGtpfVZewqDCilrClcKhdcKAd3V8wod6wqzCgMKhwoJrwobCj8KKb8KVwqnCisK4wo3Ch8KSwrnCncKuwq3CrsKUw4LCj8K3wpjCtsKOf8KowoLClsOMwqLCm8Kbwr/CscOFwp7Dh8K8wrPCjsOGwrnCksK3w4jDh8KWw5HDkWBDYzVLQD1pYC5oZ2BDYzVLQD1pXVMtZFYuUmJdQ1JsVi5kLExQY3NGaWRoXVNga2BALDBJPTk5"
+            },
+            "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/add_post\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/feed/new\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"YTpRfWtfSW1oXlhAVltUdGA5TX5rTnN9aXE3dGF1UXdhXjxyajhAcmhfVW9gdH9zYUs4N2p1XXNRdVV9a19RcWFdQDhqdH5AaE9ZN2pKXMKBWFpcwoBZcFzCgFl0f3doOV3CgVN0c3tcW2lyasKBPsKEWMKFQnZxZ1dIdUZKfntLZsKPdE5WwpJpdGtpfVZewqDCilrClcKhdcKAd3V8wod6wqzCgMKhwoJrwobCj8KKb8KVwqnCisK4wo3Ch8KSwrnCncKuwq3CrsKUw4LCj8K3wpjCtsKOf8KowoLClsOMwqLCm8Kbwr/CscOFwp7Dh8K8wrPCjsOGwrnCksK3w4jDh8KWw5HDkWBDYzVLQD1pYC5oZ2BDYzVLQD1pXVMtZFYuUmJdQ1JsVi5kLExQY3NGaWRoXVNga2BALDBJPTk5\\\""
+          }
+        },
+        {
+          "_postman_id": "27773f26-2478-68c3-d798-bbd7b2e28d13",
+          "name": "Like Post",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "try {",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    tests[\"Candid success\"] = jsonData.success === true;",
+                  "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+                  "} catch(err) {",
+                  "    console.log(err.message);",
+                  "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://becandid.com/api/like_post",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Cookie",
+                "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "ak5AwoFrTUB3YUs3woFWS1w5VUtcOFF1YW9pT11zV1tMdGhfVW1qdV17aTpQQFRIREQ="
+            },
+            "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/like_post\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/post/YfWlEoPmuhY\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"ak5AwoFrTUB3YUs3woFWS1w5VUtcOFF1YW9pT11zV1tMdGhfVW1qdV17aTpQQFRIREQ=\\\""
+          }
+        },
+        {
+          "_postman_id": "a9504985-81dd-7ab7-43e8-d54b425f2557",
+          "name": "Edit Post",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "try {",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    tests[\"Candid success\"] = jsonData.success === true;",
+                  "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+                  "} catch(err) {",
+                  "    console.log(err.message);",
+                  "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://becandid.com/api/edit_post",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Cookie",
+                "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "ak5AwoFrTUB3YUs3woFWS1w5VUtcOFF0VW9qT1l3aTk7QFp1XcKBa0pcwoBUTkxzVHFJN2FfVTdRW1B+ak5AwoFrSkxE"
+            },
+            "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/edit_post\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/post/YfWlEoPmuhY\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"ak5AwoFrTUB3YUs3woFWS1w5VUtcOFF0VW9qT1l3aTk7QFp1XcKBa0pcwoBUTkxzVHFJN2FfVTdRW1B+ak5AwoFrSkxE\\\""
+          }
+        },
+        {
+          "_postman_id": "66c0c833-0fea-b7f8-725c-e512430dd716",
+          "name": "Delete Post",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "try {",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    tests[\"Candid success\"] = jsonData.success === true;",
+                  "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+                  "} catch(err) {",
+                  "    console.log(err.message);",
+                  "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://becandid.com/api/delete_post",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Cookie",
+                "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "ak5AwoFrTUB3YUs3woFWS1w5VXFcOVF1UXNgX1V9aXE4fWs5PHNqbkRE"
+            },
+            "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/delete_post\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/me/posts\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"ak5AwoFrTUB3YUs3woFWS1w5VXFcOVF1UXNgX1V9aXE4fWs5PHNqbkRE\\\""
+          }
+        },
+        {
+          "_postman_id": "e7e59fdb-f175-d3d7-27cf-2d1b822cb6a7",
+          "name": "Mute Post",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "try {",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    tests[\"Candid success\"] = jsonData.success === true;",
+                  "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+                  "} catch(err) {",
+                  "    console.log(err.message);",
+                  "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://becandid.com/api/mute_post",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Cookie",
+                "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "ak5AwoFrTUB3YUs3woFWS1w5VUtcOA=="
+            },
+            "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/mute_post\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/post/YfWlEoPmuhY\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"ak5AwoFrTUB3YUs3woFWS1w5VUtcOA==\\\""
+          }
+        },
+        {
+          "_postman_id": "5c4a0957-6cc2-026c-e21f-3aef12c780ce",
+          "name": "Report Post",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "try {",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    tests[\"Candid success\"] = jsonData.success === true;",
+                  "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+                  "} catch(err) {",
+                  "    console.log(err.message);",
+                  "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://becandid.com/api/report_post",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Cookie",
+                "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "ak5AwoFrTUB3YUs3woFWS1w5VUtcOFF1UXNgX1V9aXE4fWF0YTdpOkl3YH5ERA=="
+            },
+            "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/report_post\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/post/YfWlEoPmuhY\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"ak5AwoFrTUB3YUs3woFWS1w5VUtcOFF1UXNgX1V9aXE4fWF0YTdpOkl3YH5ERA==\\\""
+          }
+        },
+        {
+          "_postman_id": "c3037e98-2e74-f183-f9c0-bd6f34f443e8",
+          "name": "Get Post Comments",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "try {",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    tests[\"Candid success\"] = jsonData.success === true;",
+                  "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+                  "} catch(err) {",
+                  "    console.log(err.message);",
+                  "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://becandid.com/api/post_comments",
+            "method": "POST",
+            "header": [
+              {
+                "key": "//Host",
+                "value": "becandid.com",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Accept",
+                "value": "*/*",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Accept-Language",
+                "value": "en-US,en;q=0.5",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Referer",
+                "value": "https://becandid.com/post/YfWlEoPmuhY",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Content-Type",
+                "value": "application/x-www-form-urlencoded; charset=UTF-8",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Candid-Encoded",
+                "value": "1",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "Cookie",
+                "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+                "description": ""
+              },
+              {
+                "key": "//DNT",
+                "value": "1",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Connection",
+                "value": "keep-alive",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Pragma",
+                "value": "no-cache",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Cache-Control",
+                "value": "no-cache",
+                "description": "",
+                "disabled": "true"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "aF48cWlPXXJhXUBxaTk4e2FePDdqwoE3woBRdVl2anRdb2FOXXJXW0x0ak5AwoFrTUB3YUs3woFWS1w5VUtcOA=="
+            },
+            "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/post_comments\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/post/YfWlEoPmuhY\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"aF48cWlPXXJhXUBxaTk4e2FePDdqwoE3woBRdVl2anRdb2FOXXJXW0x0ak5AwoFrTUB3YUs3woFWS1w5VUtcOA==\\\""
+          }
+        }
+      ]
+    },
+    {
+      "_postman_id": "fd609b2c-3f42-5c0a-1b3a-1b2a3a93e221",
+      "name": "Comments",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "1593456c-dff3-e6bf-0a83-8c9ce82e6dc0",
+          "name": "Add Comment",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "try {",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    tests[\"Candid success\"] = jsonData.success === true;",
+                  "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+                  "} catch(err) {",
+                  "    console.log(err.message);",
+                  "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://becandid.com/api/add_comment",
+            "method": "POST",
+            "header": [
+              {
+                "key": "//Host",
+                "value": "becandid.com",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Accept",
+                "value": "*/*",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Accept-Language",
+                "value": "en-US,en;q=0.5",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Referer",
+                "value": "https://becandid.com/post/YfWlEoPmuhY",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Content-Type",
+                "value": "application/x-www-form-urlencoded; charset=UTF-8",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Candid-Encoded",
+                "value": "1",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "Cookie",
+                "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+                "description": ""
+              },
+              {
+                "key": "//DNT",
+                "value": "1",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Connection",
+                "value": "keep-alive",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Pragma",
+                "value": "no-cache",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Cache-Control",
+                "value": "no-cache",
+                "description": "",
+                "disabled": "true"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "ak5AwoFrTUB3YUs3woFWS1w5VUtcOFF0VX1pXjhzaXVZbWtOXTtrSzhSa19VN1FbUH5gWlzCgFRPWXNqOlhzVHFJcWk5OHthXjw3UXRhwoBoXl18YU9VbWFOc8KBYF5RemFeWEBrT1E4XVVCQw=="
+            },
+            "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/add_comment\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/post/YfWlEoPmuhY\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"ak5AwoFrTUB3YUs3woFWS1w5VUtcOFF0VX1pXjhzaXVZbWtOXTtrSzhSa19VN1FbUH5gWlzCgFRPWXNqOlhzVHFJcWk5OHthXjw3UXRhwoBoXl18YU9VbWFOc8KBYF5RemFeWEBrT1E4XVVCQw==\\\""
+          }
+        },
+        {
+          "_postman_id": "4b9ffdb6-3a03-ce95-334d-52f1c134f116",
+          "name": "Add Comment (Smile)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "try {",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    tests[\"Candid success\"] = jsonData.success === true;",
+                  "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+                  "} catch(err) {",
+                  "    console.log(err.message);",
+                  "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://becandid.com/api/add_comment",
+            "method": "POST",
+            "header": [
+              {
+                "key": "//Host",
+                "value": "becandid.com",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Accept",
+                "value": "*/*",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Accept-Language",
+                "value": "en-US,en;q=0.5",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Referer",
+                "value": "https://becandid.com/post/YfWlEoPmuhY",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Content-Type",
+                "value": "application/x-www-form-urlencoded; charset=UTF-8",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Candid-Encoded",
+                "value": "1",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "Cookie",
+                "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+                "description": ""
+              },
+              {
+                "key": "//DNT",
+                "value": "1",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Connection",
+                "value": "keep-alive",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Pragma",
+                "value": "no-cache",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Cache-Control",
+                "value": "no-cache",
+                "description": "",
+                "disabled": "true"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "ak5AwoFrTUB3YUs3woFWS1w5VUtcOFF0VX1pXjhzaXVZbWtOXTtrSzd0YXVRd2FePHJqOEByaF9Vb2B0f3NhSzg3anVdc1F1VTdoXlV5YV9RbWl0TXthWzh2YF9JfmxYREQ="
+            },
+            "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/add_comment\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/post/YfWlEoPmuhY\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"ak5AwoFrTUB3YUs3woFWS1w5VUtcOFF0VX1pXjhzaXVZbWtOXTtrSzd0YXVRd2FePHJqOEByaF9Vb2B0f3NhSzg3anVdc1F1VTdoXlV5YV9RbWl0TXthWzh2YF9JfmxYREQ=\\\""
+          }
+        },
+        {
+          "_postman_id": "aa9f2585-a6cd-0285-a8d8-c95be89a8e25",
+          "name": "Like Comment",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "try {",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    tests[\"Candid success\"] = jsonData.success === true;",
+                  "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+                  "} catch(err) {",
+                  "    console.log(err.message);",
+                  "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://becandid.com/api/like_comment",
+            "method": "POST",
+            "header": [
+              {
+                "key": "//Host",
+                "value": "becandid.com",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Accept",
+                "value": "*/*",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Accept-Language",
+                "value": "en-US,en;q=0.5",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Referer",
+                "value": "https://becandid.com/post/YfWlEoPmuhY",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Content-Type",
+                "value": "application/x-www-form-urlencoded; charset=UTF-8",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Candid-Encoded",
+                "value": "1",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Cookie",
+                "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//DNT",
+                "value": "1",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Connection",
+                "value": "keep-alive",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Pragma",
+                "value": "no-cache",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Cache-Control",
+                "value": "no-cache",
+                "description": "",
+                "disabled": "true"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "YDlAe2leXXxrTUB3YUs3woBVwoFYPFVLUDxVcGE5YF5/OGFbN38="
+            },
+            "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/like_comment\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/post/YfWlEoPmuhY\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"YDlAe2leXXxrTUB3YUs3woBVwoFYPFVLUDxVcGE5YF5/OGFbN38=\\\""
+          }
+        },
+        {
+          "_postman_id": "1592fe7c-4ecc-ce9d-a301-ff3aace62357",
+          "name": "Edit Comment",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "try {",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    tests[\"Candid success\"] = jsonData.success === true;",
+                  "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+                  "} catch(err) {",
+                  "    console.log(err.message);",
+                  "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://becandid.com/api/edit_comment",
+            "method": "POST",
+            "header": [
+              {
+                "key": "//Host",
+                "value": "becandid.com",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Accept",
+                "value": "*/*",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Accept-Language",
+                "value": "en-US,en;q=0.5",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Referer",
+                "value": "https://becandid.com/post/YfWlEoPmuhY",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Content-Type",
+                "value": "application/x-www-form-urlencoded; charset=UTF-8",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Candid-Encoded",
+                "value": "1",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "Cookie",
+                "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+                "description": ""
+              },
+              {
+                "key": "//DNT",
+                "value": "1",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Connection",
+                "value": "keep-alive",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Pragma",
+                "value": "no-cache",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Cache-Control",
+                "value": "no-cache",
+                "description": "",
+                "disabled": "true"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "YDlAe2leXXxrTUB3YUs3woBVwoFYPFVLUDxVcGFxaTk4e2FePDdfOllzbE9YQFp1XcKBa0pcwoBUTkxzVHFJN2FfVTdRW1B+YDlAe2leXXxrSjtE"
+            },
+            "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/edit_comment\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/post/YfWlEoPmuhY\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"YDlAe2leXXxrTUB3YUs3woBVwoFYPFVLUDxVcGFxaTk4e2FePDdfOllzbE9YQFp1XcKBa0pcwoBUTkxzVHFJN2FfVTdRW1B+YDlAe2leXXxrSjtE\\\""
+          }
+        },
+        {
+          "_postman_id": "1519acaf-e635-5ab0-70af-4ff1e6111075",
+          "name": "Delete Comment",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "try {",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    tests[\"Candid success\"] = jsonData.success === true;",
+                  "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+                  "} catch(err) {",
+                  "    console.log(err.message);",
+                  "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://becandid.com/api/delete_comment",
+            "method": "POST",
+            "header": [
+              {
+                "key": "//Host",
+                "value": "becandid.com",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Accept",
+                "value": "*/*",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Accept-Language",
+                "value": "en-US,en;q=0.5",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Referer",
+                "value": "https://becandid.com/post/YfWlEoPmuhY",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Content-Type",
+                "value": "application/x-www-form-urlencoded; charset=UTF-8",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Candid-Encoded",
+                "value": "1",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "Cookie",
+                "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+                "description": ""
+              },
+              {
+                "key": "//DNT",
+                "value": "1",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Connection",
+                "value": "keep-alive",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Pragma",
+                "value": "no-cache",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Cache-Control",
+                "value": "no-cache",
+                "description": "",
+                "disabled": "true"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "YDlAe2leXXxrTUB3YUs3woBVwoFYPFVLUDxVbkRE"
+            },
+            "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/delete_comment\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/post/YfWlEoPmuhY\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"YDlAe2leXXxrTUB3YUs3woBVwoFYPFVLUDxVbkRE\\\""
+          }
+        },
+        {
+          "_postman_id": "9ac9deb9-672e-c655-367b-1cad2fdbce45",
+          "name": "Report Comment",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "try {",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    tests[\"Candid success\"] = jsonData.success === true;",
+                  "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+                  "} catch(err) {",
+                  "    console.log(err.message);",
+                  "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://becandid.com/api/report_comment",
+            "method": "POST",
+            "header": [
+              {
+                "key": "//Host",
+                "value": "becandid.com",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Accept",
+                "value": "*/*",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Accept-Language",
+                "value": "en-US,en;q=0.5",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Referer",
+                "value": "https://becandid.com/me/posts",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Content-Type",
+                "value": "application/x-www-form-urlencoded; charset=UTF-8",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Candid-Encoded",
+                "value": "1",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "Cookie",
+                "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+                "description": ""
+              },
+              {
+                "key": "//DNT",
+                "value": "1",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Connection",
+                "value": "keep-alive",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Pragma",
+                "value": "no-cache",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Cache-Control",
+                "value": "no-cache",
+                "description": "",
+                "disabled": "true"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "YDlAe2leXXxrTUB3YUs3woBVwoFYPFVxYH9USmHCgGFeTcKBaTk7QGk5YXRrTkB+aF5URA=="
+            },
+            "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/report_comment\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/me/posts\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"YDlAe2leXXxrTUB3YUs3woBVwoFYPFVxYH9USmHCgGFeTcKBaTk7QGk5YXRrTkB+aF5URA==\\\""
+          }
+        },
+        {
+          "_postman_id": "f2a588e3-7dd0-dcd8-99c4-f453679cb154",
+          "name": "Add Comment (Image)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "try {",
+                  "    var jsonData = JSON.parse(responseBody);",
+                  "    tests[\"Candid success\"] = jsonData.success === true;",
+                  "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+                  "} catch(err) {",
+                  "    console.log(err.message);",
+                  "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://becandid.com/api/add_comment",
+            "method": "POST",
+            "header": [
+              {
+                "key": "//Host",
+                "value": "becandid.com",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Accept",
+                "value": "*/*",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Accept-Language",
+                "value": "en-US,en;q=0.5",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Referer",
+                "value": "https://becandid.com/post/YfWlEoPmuhY",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Content-Type",
+                "value": "application/x-www-form-urlencoded; charset=UTF-8",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Candid-Encoded",
+                "value": "1",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "Cookie",
+                "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+                "description": ""
+              },
+              {
+                "key": "//DNT",
+                "value": "1",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Connection",
+                "value": "keep-alive",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Pragma",
+                "value": "no-cache",
+                "description": "",
+                "disabled": "true"
+              },
+              {
+                "key": "//Cache-Control",
+                "value": "no-cache",
+                "description": "",
+                "disabled": "true"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "ak5AwoFrTUB3YUs3woFWS1w5VUtcOFF0VX1pXjhzaXVZbWtOXTtrSzd0YXVRd2FePHJqOEByaF9Vb2B0f3NhSzg3anVdc1F1VX1rX1FxYV1AOGp0fkBoT1k3akpcwoFYWlzCgFlwXMKAVXF9dmg6X8KEV3l5woJoZ3V+dsKNSsKQZMKRTsKCfXNjVMKBUlbCisKHV3LCm8KAWmLCnnXCgHd1woliasKswpZmwqHCrcKBwozCg8KBworCgMKhwqjCjcK6woLCvMKcdsKLwq7CocKPwpvCtMKYwrbCmsOFwpzDisKewofCocK+wp7CicKww4LDhcOCwrXCs8Kmw5jCrMONwrLDnMKywqvCtsOTXVMtZFYuUmJgLmhnYENjNUtAPWldUy1kVi5SYl1DUmxWLmQsTFBjc0ZqYGxWRE5rTFBjc0ZpZGhdU2BrYEAsMEk9OTk="
+            },
+            "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/add_comment\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/post/YfWlEoPmuhY\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"ak5AwoFrTUB3YUs3woFWS1w5VUtcOFF0VX1pXjhzaXVZbWtOXTtrSzd0YXVRd2FePHJqOEByaF9Vb2B0f3NhSzg3anVdc1F1VX1rX1FxYV1AOGp0fkBoT1k3akpcwoFYWlzCgFlwXMKAVXF9dmg6X8KEV3l5woJoZ3V+dsKNSsKQZMKRTsKCfXNjVMKBUlbCisKHV3LCm8KAWmLCnnXCgHd1woliasKswpZmwqHCrcKBwozCg8KBworCgMKhwqjCjcK6woLCvMKcdsKLwq7CocKPwpvCtMKYwrbCmsOFwpzDisKewofCocK+wp7CicKww4LDhcOCwrXCs8Kmw5jCrMONwrLDnMKywqvCtsOTXVMtZFYuUmJgLmhnYENjNUtAPWldUy1kVi5SYl1DUmxWLmQsTFBjc0ZqYGxWRE5rTFBjc0ZpZGhdU2BrYEAsMEk9OTk=\\\""
+          }
+        }
+      ]
+    },
+    {
+      "_postman_id": "99b95be2-788b-c50b-fcd2-cca879ea1860",
+      "name": "Live Feed",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "try {",
+              "    var jsonData = JSON.parse(responseBody);",
+              "    tests[\"Candid success\"] = jsonData.success === true;",
+              "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+              "} catch(err) {",
+              "    console.log(err.message);",
+              "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "https://rt.becandid.com/socket.io/?EIO=3&transport=websocket",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Sec-WebSocket-Version",
+            "value": "13",
+            "description": ""
+          },
+          {
+            "key": "Sec-WebSocket-Extensions",
+            "value": "permessage-deflate",
+            "description": ""
+          },
+          {
+            "key": "Sec-WebSocket-Key",
+            "value": "2sxTgd06KdFjb0jjWFoKtA==",
+            "description": ""
+          },
+          {
+            "key": "Cookie",
+            "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+            "description": ""
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive, Upgrade",
+            "description": ""
+          },
+          {
+            "key": "Upgrade",
+            "value": "websocket",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "formdata"
+        },
+        "description": "Generated from a curl request: \ncurl \\\"https://rt.becandid.com/socket.io/?EIO=3&transport=websocket\\\" -H \\\"Host: rt.becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Sec-WebSocket-Version: 13\\\" -H \\\"Origin: https://becandid.com\\\" -H \\\"Sec-WebSocket-Extensions: permessage-deflate\\\" -H \\\"Sec-WebSocket-Key: sR+9cCDydVq45vnVrYwG1Q==\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive, Upgrade\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" -H \\\"Upgrade: websocket\\\""
+      }
+    },
+    {
+      "_postman_id": "a64b425b-5e19-6aea-b93b-c660f4410787",
+      "name": "Get Activity",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "try {",
+              "    var jsonData = JSON.parse(responseBody);",
+              "    tests[\"Candid success\"] = jsonData.success === true;",
+              "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+              "} catch(err) {",
+              "    console.log(err.message);",
+              "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "https://becandid.com/api/get_activity",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "formdata"
+        },
+        "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/get_activity\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/me/signup\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Content-Length: 0\\\""
+      }
+    },
+    {
+      "_postman_id": "fb0ca888-06e0-4e23-d706-ab7b53be244a",
+      "name": "Get My Info",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "try {",
+              "    var jsonData = JSON.parse(responseBody);",
+              "    tests[\"Candid success\"] = jsonData.success === true;",
+              "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+              "} catch(err) {",
+              "    console.log(err.message);",
+              "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "https://becandid.com/api/get_my_info",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "formdata"
+        },
+        "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/get_my_info\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/me/signup\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Content-Length: 0\\\""
+      }
+    },
+    {
+      "_postman_id": "a30bbd01-9d2a-b51c-1aeb-46ecd6460575",
+      "name": "Get Location Tags Groups",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "try {",
+              "    var jsonData = JSON.parse(responseBody);",
+              "    tests[\"Candid success\"] = jsonData.success === true;",
+              "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+              "} catch(err) {",
+              "    console.log(err.message);",
+              "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "https://becandid.com/api/get_location_tags_groups",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "a05NdWrCgThYaTl/d2tOc3FqwoBcwoBYNzg4ajlzcVFbUUtdTl1xaE48fWlOQHVsWlzCgFg3YW9qOW93aTk7c1RyVUthXn9zYHVRd2tOc3NqwoBcwoBYOFVxaF5dfGA5XHNUclVKa19Vd2VxW8KAasKBXsKDXD1beHBXSsKIdVdqwo9oSF/Ck39fcsKXcFFjwpHChVd3wpzCgVtzwpLCjnPClWN5woR7dsKHecKZecKNe8KOwrPCjG1/wqrCosKuwo/CuMKlwrHCi8K5wpHCnMKTwo7CnH7ChsODwqnCvcKnw4zCtsKGw4HDjMK5w4bCpsOGwqjDh8KrwqXDg8K3wpbDl8OIwrfCusOfTS1GaF5DQixdUzVxXy5kbF9ESWhJZ0pQX0M1dWBESWhJZ0pQVlRjaElnSkNVUy1sXkRnaElnSlReL0ZuRlBGQE5pQmxgQ2NoSWdKQ14uNWdGUEZAT0NSZF5ETmtGUEZAUFNScWF2UXRHPmRxWShKX1VqRWg/HlBhTEA+XEleOVwvJkxZQRAyRz1SLVAnBSpINhgmSDIUEjssNsO4MygzFTAbGCQrDhEBw64Sw6vDuSoaDQHDrw=="
+        },
+        "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/get_location_tags_groups\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/me/signup\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" --data \\\"a05NdWrCgThYaTl/d2tOc3FqwoBcwoBYNzg4ajlzcVFbUUtdTl1xaE48fWlOQHVsWlzCgFg3YW9qOW93aTk7c1RyVUthXn9zYHVRd2tOc3NqwoBcwoBYOFVxaF5dfGA5XHNUclVKa19Vd2VxW8KAasKBXsKDXD1beHBXSsKIdVdqwo9oSF/Ck39fcsKXcFFjwpHChVd3wpzCgVtzwpLCjnPClWN5woR7dsKHecKZecKNe8KOwrPCjG1/wqrCosKuwo/CuMKlwrHCi8K5wpHCnMKTwo7CnH7ChsODwqnCvcKnw4zCtsKGw4HDjMK5w4bCpsOGwqjDh8KrwqXDg8K3wpbDl8OIwrfCusOfTS1GaF5DQixdUzVxXy5kbF9ESWhJZ0pQX0M1dWBESWhJZ0pQVlRjaElnSkNVUy1sXkRnaElnSlReL0ZuRlBGQE5pQmxgQ2NoSWdKQ14uNWdGUEZAT0NSZF5ETmtGUEZAUFNScWF2UXRHPmRxWShKX1VqRWg/HlBhTEA+XEleOVwvJkxZQRAyRz1SLVAnBSpINhgmSDIUEjssNsO4MygzFTAbGCQrDhEBw64Sw6vDuSoaDQHDrw==\\\""
+      }
+    },
+    {
+      "_postman_id": "4f0115a1-2a76-07e0-3186-65a6b4277ce0",
+      "name": "Profile",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "try {",
+              "    var jsonData = JSON.parse(responseBody);",
+              "    tests[\"Candid success\"] = jsonData.success === true;",
+              "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+              "} catch(err) {",
+              "    console.log(err.message);",
+              "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "https://becandid.com/api/profile",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "a19Vc2pzQHdhSzd+UXRzfGA5fzhhTl1tYDlAe2leXXxrT1RAVHBhN2hPUXNgXllzYUs3fw=="
+        },
+        "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/profile\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/me/signup\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" --data \\\"a19Vc2pzQHdhSzd+UXRzfGA5fzhhTl1tYDlAe2leXXxrT1RAVHBhN2hPUXNgXllzYUs3fw==\\\""
+      }
+    },
+    {
+      "_postman_id": "f68be5e5-5f97-72ca-ddc7-40f112d69892",
+      "name": "Join Group",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "try {",
+              "    var jsonData = JSON.parse(responseBody);",
+              "    tests[\"Candid success\"] = jsonData.success === true;",
+              "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+              "} catch(err) {",
+              "    console.log(err.message);",
+              "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "https://becandid.com/api/join_group",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "YTpRfWtfSW1oXlhAVcKBbsKAVW5ERA=="
+        },
+        "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/join_group\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/me/signup\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" --data \\\"YTpRfWtfSW1oXlhAVcKBbsKAVW5ERA==\\\""
+      }
+    },
+    {
+      "_postman_id": "ac15be9f-73ab-35a8-f29e-eae83148fd8e",
+      "name": "Start Upload",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "try {",
+              "    var jsonData = JSON.parse(responseBody);",
+              "    tests[\"Candid success\"] = jsonData.success === true;",
+              "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+              "} catch(err) {",
+              "    console.log(err.message);",
+              "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "https://becandid.com/api/start_upload",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "formdata"
+        },
+        "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/start_upload\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/feed/new\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" -H \\\"Content-Length: 0\\\""
+      }
+    },
+    {
+      "_postman_id": "f874cc80-b480-eb96-2390-01e2195622d2",
+      "name": "Splash Page",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "try {",
+              "    var jsonData = JSON.parse(responseBody);",
+              "    tests[\"Candid success\"] = jsonData.success === true;",
+              "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+              "} catch(err) {",
+              "    console.log(err.message);",
+              "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "https://becandid.com/api/splash_page",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "YXRzwoBqOlltaU5NOGl0VXZXW0xE"
+        },
+        "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/splash_page\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/me/signup\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" --data \\\"YXRzwoBqOlltaU5NOGl0VXZXW0xE\\\""
+      }
+    },
+    {
+      "_postman_id": "77e8a7b0-eaa1-2ccd-1ac6-43164b3c1585",
+      "name": "Suggested Groups",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "try {",
+              "    var jsonData = JSON.parse(responseBody);",
+              "    tests[\"Candid success\"] = jsonData.success === true;",
+              "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+              "} catch(err) {",
+              "    console.log(err.message);",
+              "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "https://becandid.com/api/suggested_groups",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "YXRAwoBfOnN9a1s3fw=="
+        },
+        "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/suggested_groups\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/groups/foryou\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"YXRAwoBfOnN9a1s3fw==\\\""
+      }
+    },
+    {
+      "_postman_id": "a9eb69ee-6cd8-24c0-faac-4df8d85bc063",
+      "name": "All Interacted Posts",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "try {",
+              "    var jsonData = JSON.parse(responseBody);",
+              "    tests[\"Candid success\"] = jsonData.success === true;",
+              "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+              "} catch(err) {",
+              "    console.log(err.message);",
+              "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "https://becandid.com/api/all_interacted_posts",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "a05vwoBhXk1yYV5YQFRaYTdsX0lzV15VfWleOHNpdVnCgQ=="
+        },
+        "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/all_interacted_posts\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/me/comments\\\" -H \\\"Content-Type: application/x-www-form-urlencoded; charset=UTF-8\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" --data \\\"a05vwoBhXk1yYV5YQFRaYTdsX0lzV15VfWleOHNpdVnCgQ==\\\""
+      }
+    },
+    {
+      "_postman_id": "d3936a9a-246e-56e6-1ffb-67e3dcffb529",
+      "name": "Mark All Activities Read",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "try {",
+              "    var jsonData = JSON.parse(responseBody);",
+              "    tests[\"Candid success\"] = jsonData.success === true;",
+              "    tests[\"Logged in\"] = jsonData.notloggedin === false;",
+              "} catch(err) {",
+              "    console.log(err.message);",
+              "    tests[\"Response is string\"] = responseBody !== typeof \"string\";",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "https://becandid.com/api/mark_all_activities_read",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "formdata"
+        },
+        "description": "Generated from a curl request: \ncurl \\\"https://becandid.com/api/mark_all_activities_read\\\" -H \\\"Host: becandid.com\\\" -H \\\"User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0\\\" -H \\\"Accept: */*\\\" -H \\\"Accept-Language: en-US,en;q=0.5\\\" --compressed -H \\\"Referer: https://becandid.com/post/YfFlElPZunu\\\" -H \\\"Candid-Encoded: 1\\\" -H \\\"Cookie: __cfduid=df7f0b295e4d5cb49168348fe321810491482415427; s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu; u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==\\\" -H \\\"DNT: 1\\\" -H \\\"Connection: keep-alive\\\" -H \\\"Pragma: no-cache\\\" -H \\\"Cache-Control: no-cache\\\" -H \\\"Content-Length: 0\\\""
+      }
+    }
+  ]
+}
