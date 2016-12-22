@@ -606,75 +606,9 @@
             "method": "POST",
             "header": [
               {
-                "key": "//Host",
-                "value": "becandid.com",
-                "description": "",
-                "disabled": "true"
-              },
-              {
-                "key": "//User-Agent",
-                "value": "Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0",
-                "description": "",
-                "disabled": "true"
-              },
-              {
-                "key": "//Accept",
-                "value": "*/*",
-                "description": "",
-                "disabled": "true"
-              },
-              {
-                "key": "//Accept-Language",
-                "value": "en-US,en;q=0.5",
-                "description": "",
-                "disabled": "true"
-              },
-              {
-                "key": "//Referer",
-                "value": "https://becandid.com/post/YfWlEoPmuhY",
-                "description": "",
-                "disabled": "true"
-              },
-              {
-                "key": "//Content-Type",
-                "value": "application/x-www-form-urlencoded; charset=UTF-8",
-                "description": "",
-                "disabled": "true"
-              },
-              {
-                "key": "//Candid-Encoded",
-                "value": "1",
-                "description": "",
-                "disabled": "true"
-              },
-              {
                 "key": "Cookie",
                 "value": "s=!hnjqCEiFJBC7y+SGjTt+Lw==?gAJVAXN9cQFVBmV4cF9pZE0nCnOGcQIu;u=!s2WPwYW5ht6fJI6PTxASHw==?gAJVAXVVBjgzMDM3MnEBhnECLg==",
                 "description": ""
-              },
-              {
-                "key": "//DNT",
-                "value": "1",
-                "description": "",
-                "disabled": "true"
-              },
-              {
-                "key": "//Connection",
-                "value": "keep-alive",
-                "description": "",
-                "disabled": "true"
-              },
-              {
-                "key": "//Pragma",
-                "value": "no-cache",
-                "description": "",
-                "disabled": "true"
-              },
-              {
-                "key": "//Cache-Control",
-                "value": "no-cache",
-                "description": "",
-                "disabled": "true"
               }
             ],
             "body": {
